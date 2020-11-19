@@ -5,6 +5,14 @@ spring:
     password: 123456
     username: root
     type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      filters: stat,wall
   jpa:
     hibernate:
       ddl-auto: update
