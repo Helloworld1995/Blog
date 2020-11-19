@@ -1,0 +1,347 @@
+2020-11-19 10:55:39.949  INFO 16536 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 16536 (D:\java project\blog\target\classes started by Administrator in D:\java project\blog)
+2020-11-19 10:55:39.952 DEBUG 16536 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 10:55:39.953  INFO 16536 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 10:55:39.990  INFO 16536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-19 10:55:39.991  INFO 16536 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-19 10:55:40.646  INFO 16536 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 10:55:40.665  INFO 16536 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 JPA repository interfaces.
+2020-11-19 10:55:41.525  INFO 16536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 10:55:41.550  INFO 16536 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 10:55:41.550  INFO 16536 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 10:55:41.805  INFO 16536 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 10:55:41.805  INFO 16536 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1814 ms
+2020-11-19 10:55:41.869  INFO 16536 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 10:55:41.957  INFO 16536 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-11-19 10:55:42.188  INFO 16536 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 10:55:42.260  INFO 16536 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.17.Final}
+2020-11-19 10:55:42.261  INFO 16536 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-19 10:55:42.395  INFO 16536 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-11-19 10:55:42.540  INFO 16536 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 10:55:43.735  INFO 16536 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 10:55:43.786  INFO 16536 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 10:55:44.252  INFO 16536 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 10:55:44.330  INFO 16536 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 10:55:44.715  INFO 16536 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 10:55:44.718  INFO 16536 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 5.107 seconds (JVM running for 9.313)
+2020-11-19 10:56:09.706  INFO 16536 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 10:56:09.706  INFO 16536 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 10:56:09.718  INFO 16536 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-11-19 10:56:09.742  INFO 16536 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='192.168.191.5', classMethod='com.blog.web.IndexController.index', args=[1, 6, {}]}
+2020-11-19 10:56:09.750  INFO 16536 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 10:56:09.751 ERROR 16536 --- [http-nio-8080-exec-2] c.b.handler.ControllerExceptionHandler   : Request URL : /, Exception : org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.blog.dao.BlogMapper.listAllBlogs
+2020-11-19 10:56:09.753  WARN 16536 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.blog.dao.BlogMapper.listAllBlogs]
+2020-11-19 10:56:17.927  INFO 16536 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='192.168.191.5', classMethod='com.blog.web.IndexController.index', args=[1, 6, {}]}
+2020-11-19 10:56:17.928  INFO 16536 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 10:56:17.928 ERROR 16536 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /, Exception : org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.blog.dao.BlogMapper.listAllBlogs
+2020-11-19 10:56:17.928  WARN 16536 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.blog.dao.BlogMapper.listAllBlogs]
+2020-11-19 10:56:47.906  INFO 16536 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='192.168.191.5', classMethod='com.blog.web.IndexController.index', args=[1, 6, {}]}
+2020-11-19 10:56:47.907  INFO 16536 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 10:56:47.907 ERROR 16536 --- [http-nio-8080-exec-4] c.b.handler.ControllerExceptionHandler   : Request URL : /, Exception : org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.blog.dao.BlogMapper.listAllBlogs
+2020-11-19 10:56:47.907  WARN 16536 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.blog.dao.BlogMapper.listAllBlogs]
+2020-11-19 11:00:23.755 DEBUG 5876 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2020-11-19 11:00:23.816  INFO 5876 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 5876 (D:\java project\blog\target\classes started by Administrator in D:\java project\blog)
+2020-11-19 11:00:23.817 DEBUG 5876 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 11:00:23.817  INFO 5876 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 11:00:23.849  INFO 5876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-19 11:00:23.849  INFO 5876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-19 11:00:24.413  INFO 5876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 11:00:24.433  INFO 5876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2020-11-19 11:00:25.244  INFO 5876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 11:00:25.265  INFO 5876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 11:00:25.265  INFO 5876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 11:00:25.495  INFO 5876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 11:00:25.496  INFO 5876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1647 ms
+2020-11-19 11:00:25.550  INFO 5876 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 11:00:25.628  INFO 5876 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-11-19 11:00:25.867  INFO 5876 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 11:00:25.918  INFO 5876 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.17.Final}
+2020-11-19 11:00:25.920  INFO 5876 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-19 11:00:26.024  INFO 5876 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-11-19 11:00:26.160  INFO 5876 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 11:00:27.168  INFO 5876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 11:00:27.221  INFO 5876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 11:00:27.744  INFO 5876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 11:00:27.843  INFO 5876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 11:00:28.230  INFO 5876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 11:00:28.232  INFO 5876 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 4.724 seconds (JVM running for 8.894)
+2020-11-19 11:00:49.391  INFO 5876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 11:00:49.391  INFO 5876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 11:00:49.401  INFO 5876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-11-19 11:01:08.655  INFO 5876 --- [http-nio-8080-exec-3] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='192.168.191.5', classMethod='com.blog.web.IndexController.index', args=[1, 6, {}]}
+2020-11-19 11:01:08.694 DEBUG 5876 --- [http-nio-8080-exec-3] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id
+2020-11-19 11:01:08.706 DEBUG 5876 --- [http-nio-8080-exec-3] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==> Parameters: 
+2020-11-19 11:01:08.717 DEBUG 5876 --- [http-nio-8080-exec-3] c.b.dao.BlogMapper.listAllBlogs_COUNT    : <==      Total: 1
+2020-11-19 11:01:08.721 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.BlogMapper.listAllBlogs     : ==>  Preparing: SELECT tb.id blogId, tb.title, tb.flag, tb.content, tb.first_picture, tb.description, tb.update_time, tb.create_time, tb.appreciation, tb.commentable, tb.recommend, tb.published, tb.share_statement, tb.views, tt.id typeId, tt.name typename, tu.id userId, tu.nickname, tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id order by tb.update_time desc LIMIT ?
+2020-11-19 11:01:08.721 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.BlogMapper.listAllBlogs     : ==> Parameters: 6(Integer)
+2020-11-19 11:01:08.727 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.BlogMapper.listAllBlogs     : <==      Total: 6
+2020-11-19 11:01:08.733 DEBUG 5876 --- [http-nio-8080-exec-3] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 11:01:08.733 DEBUG 5876 --- [http-nio-8080-exec-3] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:08.735 DEBUG 5876 --- [http-nio-8080-exec-3] c.blog.dao.TypeMapper.listTypeTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:08.736 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TypeMapper.listTypeTop      : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 11:01:08.737 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TypeMapper.listTypeTop      : ==> Parameters: 6(Integer)
+2020-11-19 11:01:08.740 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TypeMapper.listTypeTop      : <==      Total: 2
+2020-11-19 11:01:08.743 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TagMapper.listTagTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 11:01:08.743 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TagMapper.listTagTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:08.747 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TagMapper.listTagTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:08.748 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TagMapper.listTagTop        : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 11:01:08.749 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TagMapper.listTagTop        : ==> Parameters: 6(Integer)
+2020-11-19 11:01:08.751 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.TagMapper.listTagTop        : <==      Total: 3
+2020-11-19 11:01:08.753 DEBUG 5876 --- [http-nio-8080-exec-3] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 11:01:08.753 DEBUG 5876 --- [http-nio-8080-exec-3] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:08.755 DEBUG 5876 --- [http-nio-8080-exec-3] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:08.756 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 11:01:08.756 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 8(Integer)
+2020-11-19 11:01:08.761 DEBUG 5876 --- [http-nio-8080-exec-3] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 8
+2020-11-19 11:01:08.762  INFO 5876 --- [http-nio-8080-exec-3] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:08.762  INFO 5876 --- [http-nio-8080-exec-3] com.blog.aspect.LogAspect                : Result : index
+2020-11-19 11:01:16.567  INFO 5876 --- [http-nio-8080-exec-8] com.blog.aspect.LogAspect                : RequestLog{url='/footer/newblog', ip='192.168.191.5', classMethod='com.blog.web.IndexController.newblogs', args=[{}]}
+2020-11-19 11:01:16.567 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 11:01:16.568 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:16.570 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:16.570 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 11:01:16.571 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 11:01:16.575 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 11:01:16.576  INFO 5876 --- [http-nio-8080-exec-8] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:16.576  INFO 5876 --- [http-nio-8080-exec-8] com.blog.aspect.LogAspect                : Result : _fragments :: newblogList
+2020-11-19 11:01:19.872  INFO 5876 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='192.168.191.5', classMethod='com.blog.web.IndexController.index', args=[2, 6, {}]}
+2020-11-19 11:01:19.875 DEBUG 5876 --- [http-nio-8080-exec-7] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id
+2020-11-19 11:01:19.875 DEBUG 5876 --- [http-nio-8080-exec-7] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==> Parameters: 
+2020-11-19 11:01:19.878 DEBUG 5876 --- [http-nio-8080-exec-7] c.b.dao.BlogMapper.listAllBlogs_COUNT    : <==      Total: 1
+2020-11-19 11:01:19.879 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listAllBlogs     : ==>  Preparing: SELECT tb.id blogId, tb.title, tb.flag, tb.content, tb.first_picture, tb.description, tb.update_time, tb.create_time, tb.appreciation, tb.commentable, tb.recommend, tb.published, tb.share_statement, tb.views, tt.id typeId, tt.name typename, tu.id userId, tu.nickname, tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id order by tb.update_time desc LIMIT ?, ?
+2020-11-19 11:01:19.880 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listAllBlogs     : ==> Parameters: 6(Integer), 6(Integer)
+2020-11-19 11:01:19.884 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listAllBlogs     : <==      Total: 3
+2020-11-19 11:01:19.885 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 11:01:19.885 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:19.887 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.TypeMapper.listTypeTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:19.889 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TypeMapper.listTypeTop      : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 11:01:19.889 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TypeMapper.listTypeTop      : ==> Parameters: 6(Integer)
+2020-11-19 11:01:19.891 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TypeMapper.listTypeTop      : <==      Total: 2
+2020-11-19 11:01:19.892 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TagMapper.listTagTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 11:01:19.893 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TagMapper.listTagTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:19.896 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TagMapper.listTagTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:19.897 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TagMapper.listTagTop        : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 11:01:19.898 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TagMapper.listTagTop        : ==> Parameters: 6(Integer)
+2020-11-19 11:01:19.901 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.TagMapper.listTagTop        : <==      Total: 3
+2020-11-19 11:01:19.902 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 11:01:19.902 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:19.904 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:19.905 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 11:01:19.905 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 8(Integer)
+2020-11-19 11:01:19.908 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 8
+2020-11-19 11:01:19.908  INFO 5876 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:19.908  INFO 5876 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : Result : index
+2020-11-19 11:01:26.513  INFO 5876 --- [http-nio-8080-exec-6] com.blog.aspect.LogAspect                : RequestLog{url='/blog/8', ip='192.168.191.5', classMethod='com.blog.web.IndexController.blog', args=[8, {}, org.apache.catalina.connector.RequestFacade@4c088f5]}
+2020-11-19 11:01:26.571 DEBUG 5876 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.getBlog          : ==>  Preparing: SELECT tb.id blogId,tb.title,tb.flag,tb.content,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views , tt.id typeId,tt.name typename, ttg.id tagId,ttg.name tagname, tu.id userId,tu.username,tu.nickname,tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id LEFT JOIN t_user tu ON tb.user_id=tu.id LEFT JOIN t_blog_tags tbt ON tbt.blogs_id=tb.id LEFT JOIN t_tag ttg ON ttg.id=tbt.tags_id WHERE tb.id=?
+2020-11-19 11:01:26.571 DEBUG 5876 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.getBlog          : ==> Parameters: 8(Long)
+2020-11-19 11:01:26.575 DEBUG 5876 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.getBlog          : <==      Total: 2
+2020-11-19 11:01:26.607 DEBUG 5876 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views=views+1 where id=?
+2020-11-19 11:01:26.608 DEBUG 5876 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.updateViews      : ==> Parameters: 8(Long)
+2020-11-19 11:01:26.610 DEBUG 5876 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-19 11:01:26.615  INFO 5876 --- [http-nio-8080-exec-6] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:26.616  INFO 5876 --- [http-nio-8080-exec-6] com.blog.aspect.LogAspect                : Result : blog
+2020-11-19 11:01:27.109  INFO 5876 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : RequestLog{url='/blog/8', ip='192.168.191.5', classMethod='com.blog.web.IndexController.blog', args=[8, {}, org.apache.catalina.connector.RequestFacade@4c088f5]}
+2020-11-19 11:01:27.111 DEBUG 5876 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.getBlog          : ==>  Preparing: SELECT tb.id blogId,tb.title,tb.flag,tb.content,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views , tt.id typeId,tt.name typename, ttg.id tagId,ttg.name tagname, tu.id userId,tu.username,tu.nickname,tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id LEFT JOIN t_user tu ON tb.user_id=tu.id LEFT JOIN t_blog_tags tbt ON tbt.blogs_id=tb.id LEFT JOIN t_tag ttg ON ttg.id=tbt.tags_id WHERE tb.id=?
+2020-11-19 11:01:27.112 DEBUG 5876 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.getBlog          : ==> Parameters: 8(Long)
+2020-11-19 11:01:27.115 DEBUG 5876 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.getBlog          : <==      Total: 2
+2020-11-19 11:01:27.116 DEBUG 5876 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views=views+1 where id=?
+2020-11-19 11:01:27.116 DEBUG 5876 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.updateViews      : ==> Parameters: 8(Long)
+2020-11-19 11:01:27.117 DEBUG 5876 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-19 11:01:27.121  INFO 5876 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:27.121  INFO 5876 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : Result : blog
+2020-11-19 11:01:37.427  INFO 5876 --- [http-nio-8080-exec-9] com.blog.aspect.LogAspect                : RequestLog{url='/footer/newblog', ip='192.168.191.5', classMethod='com.blog.web.IndexController.newblogs', args=[{}]}
+2020-11-19 11:01:37.428 DEBUG 5876 --- [http-nio-8080-exec-9] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 11:01:37.428 DEBUG 5876 --- [http-nio-8080-exec-9] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 11:01:37.430 DEBUG 5876 --- [http-nio-8080-exec-9] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 11:01:37.430 DEBUG 5876 --- [http-nio-8080-exec-9] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 11:01:37.430 DEBUG 5876 --- [http-nio-8080-exec-9] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 11:01:37.433 DEBUG 5876 --- [http-nio-8080-exec-9] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 11:01:37.433  INFO 5876 --- [http-nio-8080-exec-9] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:37.433  INFO 5876 --- [http-nio-8080-exec-9] com.blog.aspect.LogAspect                : Result : _fragments :: newblogList
+2020-11-19 11:01:37.551  INFO 5876 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : RequestLog{url='/comments/8', ip='192.168.191.5', classMethod='com.blog.web.CommentController.comments', args=[8, {}]}
+2020-11-19 11:01:37.557 DEBUG 5876 --- [http-nio-8080-exec-2] c.b.d.CommentMapper.listCommentByBlogId  : ==>  Preparing: SELECT * FROM t_comment WHERE blog_id=? AND parent_comment_id is null ORDER BY create_time
+2020-11-19 11:01:37.557 DEBUG 5876 --- [http-nio-8080-exec-2] c.b.d.CommentMapper.listCommentByBlogId  : ==> Parameters: 8(Long)
+2020-11-19 11:01:37.560 DEBUG 5876 --- [http-nio-8080-exec-2] c.b.d.CommentMapper.listCommentByBlogId  : <==      Total: 1
+2020-11-19 11:01:37.561 DEBUG 5876 --- [http-nio-8080-exec-2] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:01:37.561 DEBUG 5876 --- [http-nio-8080-exec-2] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 19(Long)
+2020-11-19 11:01:37.563 DEBUG 5876 --- [http-nio-8080-exec-2] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:01:37.567  INFO 5876 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:01:37.567  INFO 5876 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : Result : blog :: commentList
+2020-11-19 11:02:02.726  INFO 5876 --- [http-nio-8080-exec-8] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='192.168.191.5', classMethod='com.blog.web.IndexController.index', args=[1, 6, {}]}
+2020-11-19 11:02:02.727 DEBUG 5876 --- [http-nio-8080-exec-8] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id
+2020-11-19 11:02:02.727 DEBUG 5876 --- [http-nio-8080-exec-8] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==> Parameters: 
+2020-11-19 11:02:02.729 DEBUG 5876 --- [http-nio-8080-exec-8] c.b.dao.BlogMapper.listAllBlogs_COUNT    : <==      Total: 1
+2020-11-19 11:02:02.731 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listAllBlogs     : ==>  Preparing: SELECT tb.id blogId, tb.title, tb.flag, tb.content, tb.first_picture, tb.description, tb.update_time, tb.create_time, tb.appreciation, tb.commentable, tb.recommend, tb.published, tb.share_statement, tb.views, tt.id typeId, tt.name typename, tu.id userId, tu.nickname, tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id order by tb.update_time desc LIMIT ?
+2020-11-19 11:02:02.731 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listAllBlogs     : ==> Parameters: 6(Integer)
+2020-11-19 11:02:02.735 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listAllBlogs     : <==      Total: 6
+2020-11-19 11:02:02.736 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 11:02:02.737 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==> Parameters: 
+2020-11-19 11:02:02.739 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.TypeMapper.listTypeTop_COUNT  : <==      Total: 1
+2020-11-19 11:02:02.740 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TypeMapper.listTypeTop      : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 11:02:02.740 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TypeMapper.listTypeTop      : ==> Parameters: 6(Integer)
+2020-11-19 11:02:02.742 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TypeMapper.listTypeTop      : <==      Total: 2
+2020-11-19 11:02:02.744 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TagMapper.listTagTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 11:02:02.744 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TagMapper.listTagTop_COUNT  : ==> Parameters: 
+2020-11-19 11:02:02.747 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TagMapper.listTagTop_COUNT  : <==      Total: 1
+2020-11-19 11:02:02.748 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TagMapper.listTagTop        : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 11:02:02.749 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TagMapper.listTagTop        : ==> Parameters: 6(Integer)
+2020-11-19 11:02:02.751 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.TagMapper.listTagTop        : <==      Total: 3
+2020-11-19 11:02:02.752 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 11:02:02.753 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 11:02:02.755 DEBUG 5876 --- [http-nio-8080-exec-8] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 11:02:02.756 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 11:02:02.756 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 8(Integer)
+2020-11-19 11:02:02.758 DEBUG 5876 --- [http-nio-8080-exec-8] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 8
+2020-11-19 11:02:02.759  INFO 5876 --- [http-nio-8080-exec-8] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:02:02.759  INFO 5876 --- [http-nio-8080-exec-8] com.blog.aspect.LogAspect                : Result : index
+2020-11-19 11:02:07.299  INFO 5876 --- [http-nio-8080-exec-10] com.blog.aspect.LogAspect                : RequestLog{url='/blog/2', ip='192.168.191.5', classMethod='com.blog.web.IndexController.blog', args=[2, {}, org.apache.catalina.connector.RequestFacade@429720ef]}
+2020-11-19 11:02:07.302 DEBUG 5876 --- [http-nio-8080-exec-10] com.blog.dao.BlogMapper.getBlog          : ==>  Preparing: SELECT tb.id blogId,tb.title,tb.flag,tb.content,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views , tt.id typeId,tt.name typename, ttg.id tagId,ttg.name tagname, tu.id userId,tu.username,tu.nickname,tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id LEFT JOIN t_user tu ON tb.user_id=tu.id LEFT JOIN t_blog_tags tbt ON tbt.blogs_id=tb.id LEFT JOIN t_tag ttg ON ttg.id=tbt.tags_id WHERE tb.id=?
+2020-11-19 11:02:07.302 DEBUG 5876 --- [http-nio-8080-exec-10] com.blog.dao.BlogMapper.getBlog          : ==> Parameters: 2(Long)
+2020-11-19 11:02:07.305 DEBUG 5876 --- [http-nio-8080-exec-10] com.blog.dao.BlogMapper.getBlog          : <==      Total: 1
+2020-11-19 11:02:07.306 DEBUG 5876 --- [http-nio-8080-exec-10] com.blog.dao.BlogMapper.updateViews      : ==>  Preparing: update t_blog set views=views+1 where id=?
+2020-11-19 11:02:07.306 DEBUG 5876 --- [http-nio-8080-exec-10] com.blog.dao.BlogMapper.updateViews      : ==> Parameters: 2(Long)
+2020-11-19 11:02:07.308 DEBUG 5876 --- [http-nio-8080-exec-10] com.blog.dao.BlogMapper.updateViews      : <==    Updates: 1
+2020-11-19 11:02:07.311  INFO 5876 --- [http-nio-8080-exec-10] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:02:07.311  INFO 5876 --- [http-nio-8080-exec-10] com.blog.aspect.LogAspect                : Result : blog
+2020-11-19 11:02:12.360  INFO 5876 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : RequestLog{url='/footer/newblog', ip='192.168.191.5', classMethod='com.blog.web.IndexController.newblogs', args=[{}]}
+2020-11-19 11:02:12.360 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 11:02:12.360 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 11:02:12.361  INFO 5876 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : RequestLog{url='/comments/2', ip='192.168.191.5', classMethod='com.blog.web.CommentController.comments', args=[2, {}]}
+2020-11-19 11:02:12.362 DEBUG 5876 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 11:02:12.363 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 11:02:12.364 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 11:02:12.367 DEBUG 5876 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 11:02:12.367  INFO 5876 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:02:12.367  INFO 5876 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : Result : _fragments :: newblogList
+2020-11-19 11:02:12.370 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.d.CommentMapper.listCommentByBlogId  : ==>  Preparing: SELECT * FROM t_comment WHERE blog_id=? AND parent_comment_id is null ORDER BY create_time
+2020-11-19 11:02:12.370 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.d.CommentMapper.listCommentByBlogId  : ==> Parameters: 2(Long)
+2020-11-19 11:02:12.374 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.d.CommentMapper.listCommentByBlogId  : <==      Total: 4
+2020-11-19 11:02:12.375 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.375 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 2(Long)
+2020-11-19 11:02:12.377 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 2
+2020-11-19 11:02:12.378 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.378 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 1(Long)
+2020-11-19 11:02:12.382 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 2
+2020-11-19 11:02:12.383 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.383 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 4(Long)
+2020-11-19 11:02:12.385 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.386 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.386 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 9(Long)
+2020-11-19 11:02:12.387 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.388 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.388 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 3(Long)
+2020-11-19 11:02:12.390 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.391 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.391 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 5(Long)
+2020-11-19 11:02:12.393 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.393 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.394 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 11(Long)
+2020-11-19 11:02:12.395 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.396 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.396 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 6(Long)
+2020-11-19 11:02:12.398 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 2
+2020-11-19 11:02:12.399 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.399 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 7(Long)
+2020-11-19 11:02:12.401 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.401 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.402 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 8(Long)
+2020-11-19 11:02:12.403 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.404 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.404 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 12(Long)
+2020-11-19 11:02:12.406 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.407 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.407 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 13(Long)
+2020-11-19 11:02:12.408 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.409 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.409 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 10(Long)
+2020-11-19 11:02:12.411 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.412 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.412 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 14(Long)
+2020-11-19 11:02:12.414 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.415 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.415 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 15(Long)
+2020-11-19 11:02:12.417 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:12.417 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.417 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 18(Long)
+2020-11-19 11:02:12.419 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.420 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:12.420 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 20(Long)
+2020-11-19 11:02:12.421 DEBUG 5876 --- [http-nio-8080-exec-1] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:12.424  INFO 5876 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:02:12.424  INFO 5876 --- [http-nio-8080-exec-1] com.blog.aspect.LogAspect                : Result : blog :: commentList
+2020-11-19 11:02:58.758  INFO 5876 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : RequestLog{url='/comments', ip='192.168.191.5', classMethod='com.blog.web.CommentController.post', args=[Comment{id=null, nickname='李珊珊', email='', content='不错大佬', avatar='null', createTime=null}, org.apache.catalina.session.StandardSessionFacade@8310155]}
+2020-11-19 11:02:58.759 DEBUG 5876 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.getBlog          : ==>  Preparing: SELECT tb.id blogId,tb.title,tb.flag,tb.content,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views , tt.id typeId,tt.name typename, ttg.id tagId,ttg.name tagname, tu.id userId,tu.username,tu.nickname,tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id LEFT JOIN t_user tu ON tb.user_id=tu.id LEFT JOIN t_blog_tags tbt ON tbt.blogs_id=tb.id LEFT JOIN t_tag ttg ON ttg.id=tbt.tags_id WHERE tb.id=?
+2020-11-19 11:02:58.760 DEBUG 5876 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.getBlog          : ==> Parameters: 2(Long)
+2020-11-19 11:02:58.765 DEBUG 5876 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.getBlog          : <==      Total: 1
+2020-11-19 11:02:58.769 DEBUG 5876 --- [http-nio-8080-exec-4] com.blog.dao.CommentMapper.saveComment   : ==>  Preparing: INSERT INTO t_comment(content,avatar,create_time,email,blog_id,nickname,parent_comment_id,admin_comment) VALUES(?,?,?,?,?,?,?,?)
+2020-11-19 11:02:58.771 DEBUG 5876 --- [http-nio-8080-exec-4] com.blog.dao.CommentMapper.saveComment   : ==> Parameters: 不错大佬(String), /images/emoji.jpg(String), 2020-11-19 11:02:58.768(Timestamp), (String), 2(Long), 李珊珊(String), null, false(Boolean)
+2020-11-19 11:02:58.780 DEBUG 5876 --- [http-nio-8080-exec-4] com.blog.dao.CommentMapper.saveComment   : <==    Updates: 1
+2020-11-19 11:02:58.784  INFO 5876 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:02:58.784  INFO 5876 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : Result : redirect:/comments/2
+2020-11-19 11:02:58.857  INFO 5876 --- [http-nio-8080-exec-10] com.blog.aspect.LogAspect                : RequestLog{url='/comments/2;jsessionid=7D0AB42F92FBDB8AD43E8AFD8AB910C3', ip='192.168.191.5', classMethod='com.blog.web.CommentController.comments', args=[2, {}]}
+2020-11-19 11:02:58.859 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.d.CommentMapper.listCommentByBlogId  : ==>  Preparing: SELECT * FROM t_comment WHERE blog_id=? AND parent_comment_id is null ORDER BY create_time
+2020-11-19 11:02:58.860 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.d.CommentMapper.listCommentByBlogId  : ==> Parameters: 2(Long)
+2020-11-19 11:02:58.862 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.d.CommentMapper.listCommentByBlogId  : <==      Total: 5
+2020-11-19 11:02:58.863 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.863 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 2(Long)
+2020-11-19 11:02:58.866 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 2
+2020-11-19 11:02:58.866 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.866 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 1(Long)
+2020-11-19 11:02:58.868 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 2
+2020-11-19 11:02:58.869 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.869 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 4(Long)
+2020-11-19 11:02:58.871 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.871 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.871 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 9(Long)
+2020-11-19 11:02:58.875 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.875 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.875 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 3(Long)
+2020-11-19 11:02:58.877 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.878 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.878 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 5(Long)
+2020-11-19 11:02:58.880 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.881 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.881 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 11(Long)
+2020-11-19 11:02:58.883 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.883 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.883 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 6(Long)
+2020-11-19 11:02:58.885 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 2
+2020-11-19 11:02:58.885 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.886 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 7(Long)
+2020-11-19 11:02:58.887 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.888 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.888 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 8(Long)
+2020-11-19 11:02:58.890 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.890 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.891 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 12(Long)
+2020-11-19 11:02:58.892 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.892 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.893 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 13(Long)
+2020-11-19 11:02:58.894 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.895 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.895 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 10(Long)
+2020-11-19 11:02:58.896 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.897 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.897 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 14(Long)
+2020-11-19 11:02:58.899 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.899 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.899 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 15(Long)
+2020-11-19 11:02:58.901 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 1
+2020-11-19 11:02:58.901 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.902 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 18(Long)
+2020-11-19 11:02:58.903 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.904 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.904 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 20(Long)
+2020-11-19 11:02:58.905 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.906 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==>  Preparing: SELECT * FROM t_comment WHERE parent_comment_id=?
+2020-11-19 11:02:58.906 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : ==> Parameters: 21(Long)
+2020-11-19 11:02:58.907 DEBUG 5876 --- [http-nio-8080-exec-10] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
+2020-11-19 11:02:58.910  INFO 5876 --- [http-nio-8080-exec-10] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 11:02:58.910  INFO 5876 --- [http-nio-8080-exec-10] com.blog.aspect.LogAspect                : Result : blog :: commentList
+2020-11-19 11:03:16.554  INFO 5876 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 11:03:16.555  INFO 5876 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 11:03:16.557  INFO 5876 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-11-19 11:03:16.575  INFO 5876 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

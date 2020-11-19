@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.BlogMapper">
+
+<select id="listBlog" parameterType="com.blog.vo.BlogQuery" resultMap="selectBlogResultMap">
+<include refid="select_t_blog"/>,tt.name typename FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id WHERE 1=1
+<if test="title !=null and title !=''">
+AND tb.title=#{title}
+</if>
+<if test="typeId!=null and typeId!=''">
+AND tt.id=#{typeId}
+</if>
+<if test="recommend !=null and recommend !=''">
+AND tb.recommend=#{recommend}
+</if>
+</select>
+<select id="listBlogByTypeId" parameterType="Long" resultMap="selectBlogResultMap">
+<include refid="select_t_blog"/>,
+<include refid="select_type"/>
+<!--<include refid="select_tag"/>-->
+tu.id userId,tu.username,tu.nickname,tu.avatar
+<include refid="join_table"/>
+-- LEFT JOIN t_blog_tags tbt
+-- ON tbt.blogs_id=tb.id
+-- LEFT JOIN t_tag ttg
+-- ON ttg.id=tbt.tags_id
+WHERE tt.id=#{id};
+</select>
+<sql id="selectBlogByXx">
+<include refid="select_t_blog"/>,
+<include refid="select_type"/>
+<include refid="select_tag"/>
+tu.id userId,tu.username,tu.nickname,tu.avatar
+<include refid="join_table"/>
+LEFT JOIN t_blog_tags tbt
+ON tbt.blogs_id=tb.id
+LEFT JOIN t_tag ttg
+ON ttg.id=tbt.tags_id
+</sql>
+<select id="listBlogByTagId" parameterType="Long" resultMap="selectBlogResultMap">
+<include refid="selectBlogByXx"/>
+WHERE ttg.id=#{id};
+</select>
+<select id="listAllBlogs" resultMap="selectBlogResultMap">
+<include refid="select_t_blog"/>,
+<include refid="select_type"/>tu.id userId,tu.nickname,tu.avatar
+<include refid="join_table"/>
+</select>
+
+<select id="listBlogQuery" parameterType="String" resultMap="selectBlogResultMap">
+<include refid="select_t_blog"/>,tt.name,tu.avatar,tu.nickname
+<include refid="join_table"/>
+WHERE tb.title like #{query} or tb.content like #{query} or tb.description like #{query}
+</select>
+
+
+<select id="getBlogToTag" parameterType="Long" resultType="com.blog.vo.BlogToTagQuery">
+SELECT blogs_id,tags_id
+FROM t_blog_tags
+WHERE blogs_id=#{id};
+</select>
+
+<select id="getBlog" parameterType="Long" resultMap="selectBlogResultMap">
+<include refid="select_t_blog"/>,
+<include refid="select_type"/>
+<include refid="select_tag"/>
+tu.id userId,tu.username,tu.nickname,tu.avatar
+<include refid="join_table"/>
+LEFT JOIN t_blog_tags tbt
+ON tbt.blogs_id=tb.id
+LEFT JOIN t_tag ttg
+ON ttg.id=tbt.tags_id
+WHERE tb.id=#{id}
+</select>
+<insert id="saveBlog" useGeneratedKeys="true" keyProperty="id" keyColumn="id" parameterType="com.blog.po.Blog">
+INSERT INTO t_blog(appreciation,commentable,content,create_time,first_picture,flag,published,recommend,share_statement,title,update_time,views,type_id,description,user_id)
+VALUES(#{appreciation},#{commentable},#{content},#{createTime},#{firstPicture},#{flag},#{published},#{recommend},#{shareStatement},#{title},#{updateTime},#{views},#{type.id},#{description},1);
+</insert>
+
+<insert id="saveBlogToTag" parameterType="com.blog.po.Blog">
+INSERT INTO t_blog_tags(blogs_id, tags_id) VALUES
+<foreach collection="blog.tagIdList" item="tag_id" separator=",">
+    (
+     #{blog.id},
+     #{tag_id}
+    )
+</foreach>
+</insert>
+
+<update id="updateBlog" parameterType="com.blog.po.Blog">
+UPDATE t_blog SET appreciation=#{appreciation},commentable=#{commentable},content=#{content},
+                  first_picture=#{firstPicture},flag=#{flag},
+                  published=#{published},recommend=#{recommend},share_statement=#{shareStatement},
+                  title=#{title},update_time=#{updateTime},type_id=#{type.id},description=#{description}
+WHERE id=#{id}
+
+</update>
+
+<sql id="select_t_blog">
+    SELECT tb.id blogId,tb.title,tb.flag,tb.content,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views
+</sql>
+<sql id="join_table">
+    FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id LEFT JOIN t_user tu ON tb.user_id=tu.id
+</sql>
+<sql id="select_type">
+    tt.id typeId,tt.name typename,
+</sql>
+<sql id="select_tag">
+    ttg.id tagId,ttg.name tagname,
+</sql>
+
+<sql id="select_user">
+    tu.id userId,tu.username,tu.nickname,tu.avatar
+</sql>
+
+<resultMap id="selectBlogQueryResultMap" type="com.blog.vo.BlogQuery">
+    <result property="title" column="title"/>
+    <result property="typeId" column="typeId"/>
+    <result property="recommend" column="recommend"/>
+</resultMap>
+
+<resultMap id="selectBlogResultMap" type="com.blog.po.Blog">
+    <id property="id" column="blogId"/>
+    <result property="title" column="title"/>
+    <result property="content" column="content"/>
+    <result property="firstPicture" column="first_picture"/>
+    <result property="flag" column="flag"/>
+    <result property="views" column="views"/>
+    <result property="appreciation" column="appreciation"/>
+    <result property="shareStatement" column="share_statement"/>
+    <result property="commentable" column="commentable"/>
+    <result property="published" column="published"/>
+    <result property="recommend" column="recommend"/>
+    <result property="createTime" column="create_time"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="description" column="description"/>
+    <association property="type" javaType="com.blog.po.Type">
+        <result property="id" column="typeId"/>
+        <result property="name" column="typename"/>
+    </association>
+    <association property="user" javaType="com.blog.po.User">
+        <result property="id" column="userId"/>
+        <result property="username" column="username"/>
+        <result property="avatar" column="avatar"/>
+        <result property="nickname" column="nickname"/>
+    </association>
+    <collection property="tags" javaType="list" ofType="com.blog.po.Tag">
+        <result property="id" column="tagId"/>
+        <result property="name" column="tagname"/>
+    </collection>
+    <!--<association property="User" javaType="com.blog.po.User">-->
+        <!--<id property="id" column="id"/>-->
+        <!--<result property="nickname" column="nickname"/>-->
+        <!--<result property="username" column="username"/>-->
+        <!--<result property="password" column="password"/>-->
+        <!--<result property="email" column="email"/>-->
+        <!--<result property="avatar" column="avatar"/>-->
+        <!--<result property="type" column="type"/>-->
+        <!--<result property="createTime" column="create_time"/>-->
+        <!--<result property="updateTime" column="update_time"/>-->
+    <!--</association>-->
+    <!--<collection property="commentList" ofType="com.blog.po.Comment">-->
+        <!--<id property="id" column="id"/>-->
+        <!--<result property="nickname" column="nickname"/>-->
+        <!--<result property="email" column="email"/>-->
+        <!--<result property="content" column="content"/>-->
+        <!--<result property="avatar" column="avatar"/>-->
+        <!--<result property="createTime" column="create_time"/>-->
+        <!--<collection property="replyComments" ofType="com.blog.po.Comment">-->
+            <!--<id property="id" column="id"/>-->
+            <!--<result property="nickname" column="nickname"/>-->
+            <!--<result property="email" column="email"/>-->
+            <!--<result property="content" column="content"/>-->
+            <!--<result property="avatar" column="avatar"/>-->
+            <!--<result property="createTime" column="create_time"/>-->
+        <!--</collection>-->
+        <!--<collection property="tags" ofType="com.blog.po.Tag">-->
+            <!--<id property="id" column="id"/>-->
+            <!--<result property="nickname" column="nickname"/>-->
+            <!--<result property="email" column="email"/>-->
+            <!--<result property="content" column="content"/>-->
+            <!--<result property="avatar" column="avatar"/>-->
+            <!--<result property="createTime" column="create_time"/>-->
+        <!--</collection>-->
+    <!--</collection>-->
+</resultMap>
+
+
+</mapper>

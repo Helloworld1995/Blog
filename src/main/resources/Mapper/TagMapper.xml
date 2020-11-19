@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.TagMapper">
+<select id="getTags" resultType="com.blog.po.Tag">
+SELECT * FROM t_tag WHERE 1=1
+<foreach collection="list" item= "id" open="AND (" separator="or" close=")">
+id=#{id}
+</foreach>
+</select>
+<select id="listTagByBlog" parameterType="Long" resultType="com.blog.po.Tag">
+SELECT tt.* FROM t_tag tt JOIN t_blog_tags ttt ON ttt.tags_id=tt.id JOIN t_blog tb ON tb.id=ttt.blogs_id
+WHERE tb.id=#{blogId}
+</select>
+<select id="listTagTop" resultMap="tagAndBlogMap">
+SELECT tt.*,count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id=tt.id LEFT JOIN t_blog tb
+ON tb.id=ttt.blogs_id WHERE tb.published GROUP BY tt.id
+</select>
+
+<resultMap id="tagAndBlogMap" type="com.blog.po.Tag">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="count" column="blogsCount"/>
+        <!--<collection property="blogs" javaType="list" ofType="com.blog.po.Blog">-->
+                <!--<result property="tb.id" column="tb_id"/>-->
+        <!--</collection>-->
+</resultMap>
+
+
+
+</mapper>

@@ -1,0 +1,20 @@
+spring:
+  thymeleaf:
+    mode: HTML
+  profiles:
+    active: dev
+  messages:
+    basename: i18n/messages
+
+mybatis:
+  mapper-locations: classpath:dao/*.xml
+  type-aliases-package: com.blog.po,com.blog.vo
+  configuration:
+    map-underscore-to-camel-case: true
+    jdbc-type-for-null: null
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+comment.avatar: /images/emoji.jpg
