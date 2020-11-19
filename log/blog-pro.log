@@ -2153,3 +2153,492 @@ Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to 
 2020-11-19 16:14:21.334 DEBUG 17824 --- [http-nio-8080-exec-7] c.b.dao.CommentMapper.listReplyComments  : <==      Total: 0
 2020-11-19 16:14:21.338  INFO 17824 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : -----------doAfter------------
 2020-11-19 16:14:21.338  INFO 17824 --- [http-nio-8080-exec-7] com.blog.aspect.LogAspect                : Result : blog :: commentList
+2020-11-19 16:52:14.797  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 16:52:14.800 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 16:52:14.800  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 16:52:14.843  INFO 4800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-19 16:52:14.843  INFO 4800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-19 16:52:15.550  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 16:52:15.571  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2020-11-19 16:52:16.371  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 16:52:16.395  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 16:52:16.395  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 16:52:16.638  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 16:52:16.638  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1795 ms
+2020-11-19 16:52:16.707  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 16:52:16.962  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-11-19 16:52:17.110  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 16:52:17.162  INFO 4800 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.17.Final}
+2020-11-19 16:52:17.164  INFO 4800 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-11-19 16:52:17.280  INFO 4800 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-11-19 16:52:17.476  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 16:52:18.773  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 16:52:18.823  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 16:52:19.386  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 16:52:19.640  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 16:52:19.979  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 16:52:19.981  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 5.532 seconds (JVM running for 9.661)
+2020-11-19 16:53:28.256  INFO 4800 --- [http-nio-8080-exec-2] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1604887706; Idea-d1852ee0=aac67126-dc74-4043-b925-f20931288f7b; JSESSIONID=CF1196884E9E0FE69F6E628B465C18C9; Hm_lpvt_eaa57ca47dacb4ad4f5a257001a3457c=1605773693] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-11-19 16:53:28.262  INFO 4800 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 16:53:28.262  INFO 4800 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 16:53:28.278  INFO 4800 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-11-19 16:53:28.316  INFO 4800 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : RequestLog{url='/', ip='0:0:0:0:0:0:0:1', classMethod='com.blog.web.IndexController.index', args=[1, 6, {}]}
+2020-11-19 16:53:28.362 ERROR 4800 --- [http-nio-8080-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, lastPacketReceivedIdleMillis : 69584
+2020-11-19 16:53:28.366 ERROR 4800 --- [http-nio-8080-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, lastPacketReceivedIdleMillis : 71421
+2020-11-19 16:53:28.370 ERROR 4800 --- [http-nio-8080-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, lastPacketReceivedIdleMillis : 71436
+2020-11-19 16:53:28.372 ERROR 4800 --- [http-nio-8080-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, lastPacketReceivedIdleMillis : 71451
+2020-11-19 16:53:28.374 ERROR 4800 --- [http-nio-8080-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, jdbcUrl : jdbc:mysql://localhost:3306/blog-dev?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf-8, lastPacketReceivedIdleMillis : 71464
+2020-11-19 16:53:28.380 DEBUG 4800 --- [http-nio-8080-exec-2] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==>  Preparing: SELECT count(0) FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id
+2020-11-19 16:53:28.412 DEBUG 4800 --- [http-nio-8080-exec-2] c.b.dao.BlogMapper.listAllBlogs_COUNT    : ==> Parameters: 
+2020-11-19 16:53:28.425 DEBUG 4800 --- [http-nio-8080-exec-2] c.b.dao.BlogMapper.listAllBlogs_COUNT    : <==      Total: 1
+2020-11-19 16:53:28.429 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.BlogMapper.listAllBlogs     : ==>  Preparing: SELECT tb.id blogId, tb.title, tb.flag, tb.content, tb.first_picture, tb.description, tb.update_time, tb.create_time, tb.appreciation, tb.commentable, tb.recommend, tb.published, tb.share_statement, tb.views, tt.id typeId, tt.name typename, tu.id userId, tu.nickname, tu.avatar FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id LEFT JOIN t_user tu ON tb.user_id = tu.id order by tb.update_time desc LIMIT ?
+2020-11-19 16:53:28.433 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.BlogMapper.listAllBlogs     : ==> Parameters: 6(Integer)
+2020-11-19 16:53:28.440 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.BlogMapper.listAllBlogs     : <==      Total: 6
+2020-11-19 16:53:28.445 DEBUG 4800 --- [http-nio-8080-exec-2] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 16:53:28.449 DEBUG 4800 --- [http-nio-8080-exec-2] c.blog.dao.TypeMapper.listTypeTop_COUNT  : ==> Parameters: 
+2020-11-19 16:53:28.451 DEBUG 4800 --- [http-nio-8080-exec-2] c.blog.dao.TypeMapper.listTypeTop_COUNT  : <==      Total: 1
+2020-11-19 16:53:28.452 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TypeMapper.listTypeTop      : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id = tt.id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 16:53:28.453 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TypeMapper.listTypeTop      : ==> Parameters: 6(Integer)
+2020-11-19 16:53:28.455 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TypeMapper.listTypeTop      : <==      Total: 2
+2020-11-19 16:53:28.458 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TagMapper.listTagTop_COUNT  : ==>  Preparing: SELECT count(0) FROM (SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id) table_count
+2020-11-19 16:53:28.459 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TagMapper.listTagTop_COUNT  : ==> Parameters: 
+2020-11-19 16:53:28.462 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TagMapper.listTagTop_COUNT  : <==      Total: 1
+2020-11-19 16:53:28.464 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TagMapper.listTagTop        : ==>  Preparing: SELECT tt.*, count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id = tt.id LEFT JOIN t_blog tb ON tb.id = ttt.blogs_id WHERE tb.published GROUP BY tt.id order by blogsCount desc LIMIT ?
+2020-11-19 16:53:28.465 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TagMapper.listTagTop        : ==> Parameters: 6(Integer)
+2020-11-19 16:53:28.467 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.TagMapper.listTagTop        : <==      Total: 3
+2020-11-19 16:53:28.468 DEBUG 4800 --- [http-nio-8080-exec-2] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 16:53:28.481 DEBUG 4800 --- [http-nio-8080-exec-2] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 16:53:28.482 DEBUG 4800 --- [http-nio-8080-exec-2] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 16:53:28.484 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 16:53:28.484 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 8(Integer)
+2020-11-19 16:53:28.488 DEBUG 4800 --- [http-nio-8080-exec-2] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 8
+2020-11-19 16:53:28.488  INFO 4800 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 16:53:28.488  INFO 4800 --- [http-nio-8080-exec-2] com.blog.aspect.LogAspect                : Result : index
+2020-11-19 16:53:29.224  INFO 4800 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : RequestLog{url='/footer/newblog', ip='0:0:0:0:0:0:0:1', classMethod='com.blog.web.IndexController.newblogs', args=[{}]}
+2020-11-19 16:53:29.225 DEBUG 4800 --- [http-nio-8080-exec-4] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 16:53:29.225 DEBUG 4800 --- [http-nio-8080-exec-4] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 16:53:29.227 DEBUG 4800 --- [http-nio-8080-exec-4] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 16:53:29.228 DEBUG 4800 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 16:53:29.228 DEBUG 4800 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 16:53:29.235 DEBUG 4800 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 16:53:29.235  INFO 4800 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : -----------doAfter------------
+2020-11-19 16:53:29.236  INFO 4800 --- [http-nio-8080-exec-4] com.blog.aspect.LogAspect                : Result : _fragments :: newblogList
+2020-11-19 16:53:38.661 DEBUG 4800 --- [http-nio-8080-exec-2] c.b.d.U.findByUsernameAndPassword        : ==>  Preparing: select * from t_user where username=? and password=?
+2020-11-19 16:53:38.662 DEBUG 4800 --- [http-nio-8080-exec-2] c.b.d.U.findByUsernameAndPassword        : ==> Parameters: Lee(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-11-19 16:53:38.665 DEBUG 4800 --- [http-nio-8080-exec-2] c.b.d.U.findByUsernameAndPassword        : <==      Total: 1
+2020-11-19 16:59:04.666  INFO 4800 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 16:59:04.667  INFO 4800 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 16:59:04.669  INFO 4800 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-11-19 16:59:04.671  INFO 4800 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-11-19 16:59:07.654  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 16:59:07.655 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 16:59:07.655  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 16:59:07.899  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 16:59:07.909  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 JPA repository interfaces.
+2020-11-19 16:59:08.212  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 16:59:08.213  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 16:59:08.213  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 16:59:08.250  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 16:59:08.250  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 593 ms
+2020-11-19 16:59:08.284  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 16:59:08.354  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-11-19 16:59:08.466  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 16:59:08.518  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 16:59:09.202  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 16:59:09.237  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 16:59:09.611  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 16:59:09.654  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 16:59:09.910  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 16:59:09.910  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.285 seconds (JVM running for 419.59)
+2020-11-19 16:59:09.912  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 16:59:10.589  INFO 4800 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 16:59:10.589  INFO 4800 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 16:59:10.603  INFO 4800 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-19 16:59:10.606 ERROR 4800 --- [http-nio-8080-exec-2] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 16:59:10.607  WARN 4800 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 16:59:12.420 ERROR 4800 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 16:59:12.420  WARN 4800 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 16:59:13.553 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 16:59:13.554  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 16:59:50.934 DEBUG 4800 --- [http-nio-8080-exec-9] c.b.d.U.findByUsernameAndPassword        : ==>  Preparing: select * from t_user where username=? and password=?
+2020-11-19 16:59:50.934 DEBUG 4800 --- [http-nio-8080-exec-9] c.b.d.U.findByUsernameAndPassword        : ==> Parameters: Lee(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-11-19 16:59:50.936 DEBUG 4800 --- [http-nio-8080-exec-9] c.b.d.U.findByUsernameAndPassword        : <==      Total: 1
+2020-11-19 16:59:51.266 DEBUG 4800 --- [http-nio-8080-exec-4] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 16:59:51.267 DEBUG 4800 --- [http-nio-8080-exec-4] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 16:59:51.270 DEBUG 4800 --- [http-nio-8080-exec-4] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 16:59:51.271 DEBUG 4800 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 16:59:51.272 DEBUG 4800 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 16:59:51.274 DEBUG 4800 --- [http-nio-8080-exec-4] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 17:00:03.307 ERROR 4800 --- [http-nio-8080-exec-5] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:00:03.308  WARN 4800 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:00:05.195 ERROR 4800 --- [http-nio-8080-exec-7] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:00:05.195  WARN 4800 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:00:06.059 ERROR 4800 --- [http-nio-8080-exec-8] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:00:06.060  WARN 4800 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:01:16.873 ERROR 4800 --- [http-nio-8080-exec-10] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:01:16.874  WARN 4800 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:01:18.098 ERROR 4800 --- [http-nio-8080-exec-2] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:01:18.098  WARN 4800 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:01:19.076 ERROR 4800 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:01:19.076  WARN 4800 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:01:19.938 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:01:19.939  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:03:27.423 ERROR 4800 --- [http-nio-8080-exec-7] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:03:27.424  WARN 4800 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:04:14.802  INFO 4800 --- [Thread-25] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:04:14.802  INFO 4800 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:04:14.803  INFO 4800 --- [Thread-25] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2020-11-19 17:04:14.810  INFO 4800 --- [Thread-25] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2020-11-19 17:04:17.924  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:04:17.924 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:04:17.924  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:04:18.201  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:04:18.210  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 JPA repository interfaces.
+2020-11-19 17:04:18.508  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:04:18.509  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:04:18.509  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:04:18.565  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:04:18.566  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 640 ms
+2020-11-19 17:04:18.617  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:04:18.912  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2020-11-19 17:04:19.041  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:04:19.077  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:04:19.681  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:04:19.727  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:04:20.070  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:04:20.110  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:04:20.376  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:04:20.377  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.483 seconds (JVM running for 730.057)
+2020-11-19 17:04:20.379  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:04:20.453  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:04:20.454  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:04:20.462  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-11-19 17:04:20.463 ERROR 4800 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:04:20.463  WARN 4800 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:04:21.516 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:04:21.517  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:04:22.355 ERROR 4800 --- [http-nio-8080-exec-4] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:04:22.355  WARN 4800 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:05:46.571  INFO 4800 --- [Thread-31] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:05:46.572  INFO 4800 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:05:46.572  INFO 4800 --- [Thread-31] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
+2020-11-19 17:05:46.578  INFO 4800 --- [Thread-31] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2020-11-19 17:05:49.796  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:05:49.808 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:05:49.808  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:05:50.129  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:05:50.135  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6ms. Found 0 JPA repository interfaces.
+2020-11-19 17:05:50.396  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:05:50.398  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:05:50.398  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:05:50.436  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:05:50.436  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 625 ms
+2020-11-19 17:05:50.465  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:05:50.541  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2020-11-19 17:05:50.619  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:05:50.656  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:05:51.120  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:05:51.151  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:05:51.408  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:05:51.446  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:05:51.694  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:05:51.694  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 1.941 seconds (JVM running for 821.374)
+2020-11-19 17:05:51.697  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:05:53.000  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:05:53.001  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:05:53.017  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-11-19 17:05:56.297 DEBUG 4800 --- [http-nio-8080-exec-4] c.b.d.U.findByUsernameAndPassword        : ==>  Preparing: select * from t_user where username=? and password=?
+2020-11-19 17:05:56.298 DEBUG 4800 --- [http-nio-8080-exec-4] c.b.d.U.findByUsernameAndPassword        : ==> Parameters: Lee(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-11-19 17:05:56.300 DEBUG 4800 --- [http-nio-8080-exec-4] c.b.d.U.findByUsernameAndPassword        : <==      Total: 1
+2020-11-19 17:05:56.587 DEBUG 4800 --- [http-nio-8080-exec-9] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 17:05:56.588 DEBUG 4800 --- [http-nio-8080-exec-9] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 17:05:56.592 DEBUG 4800 --- [http-nio-8080-exec-9] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 17:05:56.594 DEBUG 4800 --- [http-nio-8080-exec-9] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 17:05:56.595 DEBUG 4800 --- [http-nio-8080-exec-9] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 17:05:56.598 DEBUG 4800 --- [http-nio-8080-exec-9] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 17:06:37.272 ERROR 4800 --- [http-nio-8080-exec-10] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:37.272  WARN 4800 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:38.385 ERROR 4800 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:38.385  WARN 4800 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:39.274 ERROR 4800 --- [http-nio-8080-exec-2] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:39.275  WARN 4800 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:39.954 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:39.954  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:53.518 ERROR 4800 --- [http-nio-8080-exec-4] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:53.518  WARN 4800 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:54.405 ERROR 4800 --- [http-nio-8080-exec-5] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:54.405  WARN 4800 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:55.146 ERROR 4800 --- [http-nio-8080-exec-6] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:55.146  WARN 4800 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:55.820 ERROR 4800 --- [http-nio-8080-exec-7] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:55.820  WARN 4800 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:56.592 ERROR 4800 --- [http-nio-8080-exec-8] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:56.593  WARN 4800 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:57.243 ERROR 4800 --- [http-nio-8080-exec-9] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:57.244  WARN 4800 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:57.869 ERROR 4800 --- [http-nio-8080-exec-2] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:57.870  WARN 4800 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:06:58.450 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:06:58.450  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:07:53.477  INFO 4800 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:07:53.478  INFO 4800 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:07:53.478  INFO 4800 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closing ...
+2020-11-19 17:07:53.487  INFO 4800 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
+2020-11-19 17:07:56.774  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:07:56.774 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:07:56.774  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:07:57.074  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:07:57.081  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JPA repository interfaces.
+2020-11-19 17:07:57.639  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:07:57.640  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:07:57.641  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:07:57.703  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:07:57.703  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 926 ms
+2020-11-19 17:07:57.747  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:07:57.839  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} inited
+2020-11-19 17:07:57.948  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:07:58.020  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:07:58.678  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:07:58.724  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:07:59.022  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:07:59.068  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:07:59.371  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:07:59.372  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.627 seconds (JVM running for 949.052)
+2020-11-19 17:07:59.373  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:07:59.486  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:07:59.487  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:07:59.495  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-11-19 17:07:59.496 ERROR 4800 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:07:59.496  WARN 4800 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:08:01.645 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2020-11-19 17:08:01.645  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-11-19 17:11:33.607  INFO 4800 --- [Thread-43] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:11:33.607  INFO 4800 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:11:33.610  INFO 4800 --- [Thread-43] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closing ...
+2020-11-19 17:11:33.618  INFO 4800 --- [Thread-43] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closed
+2020-11-19 17:11:36.745  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:11:36.745 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:11:36.745  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:11:37.106  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:11:37.116  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JPA repository interfaces.
+2020-11-19 17:11:37.452  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:11:37.453  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:11:37.453  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:11:37.493  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:11:37.493  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 737 ms
+2020-11-19 17:11:37.556  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:11:37.631  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} inited
+2020-11-19 17:11:37.702  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:11:37.732  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:11:38.143  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:11:38.171  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:11:38.422  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:11:38.476  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:11:38.748  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:11:38.748  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.032 seconds (JVM running for 1168.428)
+2020-11-19 17:11:38.751  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:11:54.044  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:11:54.045  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:11:54.054  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-11-19 17:12:26.086  INFO 4800 --- [Thread-49] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:12:26.087  INFO 4800 --- [Thread-49] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:12:26.087  INFO 4800 --- [Thread-49] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closing ...
+2020-11-19 17:12:26.096  INFO 4800 --- [Thread-49] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closed
+2020-11-19 17:12:29.445  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:12:29.445 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:12:29.445  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:12:29.930  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:12:29.939  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 JPA repository interfaces.
+2020-11-19 17:12:30.313  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:12:30.314  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:12:30.314  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:12:30.357  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:12:30.357  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 890 ms
+2020-11-19 17:12:30.416  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:12:30.506  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} inited
+2020-11-19 17:12:30.636  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:12:30.698  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:12:31.196  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:12:31.229  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:12:31.507  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:12:31.548  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:12:31.820  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:12:31.820  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.406 seconds (JVM running for 1221.5)
+2020-11-19 17:12:31.825  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:12:31.883  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:12:31.884  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:12:31.915  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
+2020-11-19 17:12:35.352 DEBUG 4800 --- [http-nio-8080-exec-6] c.b.d.U.findByUsernameAndPassword        : ==>  Preparing: select * from t_user where username=? and password=?
+2020-11-19 17:12:35.353 DEBUG 4800 --- [http-nio-8080-exec-6] c.b.d.U.findByUsernameAndPassword        : ==> Parameters: Lee(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-11-19 17:12:35.355 DEBUG 4800 --- [http-nio-8080-exec-6] c.b.d.U.findByUsernameAndPassword        : <==      Total: 1
+2020-11-19 17:12:35.785 DEBUG 4800 --- [http-nio-8080-exec-1] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 17:12:35.785 DEBUG 4800 --- [http-nio-8080-exec-1] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 17:12:35.789 DEBUG 4800 --- [http-nio-8080-exec-1] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 17:12:35.790 DEBUG 4800 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 17:12:35.790 DEBUG 4800 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 17:12:35.793 DEBUG 4800 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 17:13:29.432  INFO 4800 --- [Thread-55] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:13:29.433  INFO 4800 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:13:29.433  INFO 4800 --- [Thread-55] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closing ...
+2020-11-19 17:13:29.441  INFO 4800 --- [Thread-55] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closed
+2020-11-19 17:13:32.578  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:13:32.579 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:13:32.579  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:13:33.097  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:13:33.107  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 JPA repository interfaces.
+2020-11-19 17:13:33.419  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:13:33.419  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:13:33.420  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:13:33.461  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:13:33.461  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 881 ms
+2020-11-19 17:13:33.501  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:13:33.628  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} inited
+2020-11-19 17:13:33.714  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:13:33.749  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:13:34.291  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:13:34.355  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:13:34.683  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:13:34.726  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:13:34.971  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:13:34.972  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.422 seconds (JVM running for 1284.652)
+2020-11-19 17:13:34.972  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:13:34.973  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:13:34.981  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:13:34.987  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-11-19 17:13:34.989 ERROR 4800 --- [http-nio-8080-exec-1] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present
+2020-11-19 17:13:34.989  WARN 4800 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present]
+2020-11-19 17:13:39.307 ERROR 4800 --- [http-nio-8080-exec-3] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present
+2020-11-19 17:13:39.307  WARN 4800 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present]
+2020-11-19 17:13:41.964 ERROR 4800 --- [http-nio-8080-exec-4] c.b.handler.ControllerExceptionHandler   : Request URL : /admin/login, Exception : org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present
+2020-11-19 17:13:41.965  WARN 4800 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'username' is not present]
+2020-11-19 17:13:50.934  INFO 4800 --- [Thread-61] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:13:50.934  INFO 4800 --- [Thread-61] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:13:50.935  INFO 4800 --- [Thread-61] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closing ...
+2020-11-19 17:13:50.947  INFO 4800 --- [Thread-61] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closed
+2020-11-19 17:13:54.060  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:13:54.060 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:13:54.060  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:13:54.266  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:13:54.273  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 JPA repository interfaces.
+2020-11-19 17:13:54.515  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:13:54.516  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:13:54.516  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:13:54.560  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:13:54.560  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 497 ms
+2020-11-19 17:13:54.588  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:13:54.640  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} inited
+2020-11-19 17:13:54.706  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:13:54.739  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:13:55.207  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:13:55.235  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:13:55.472  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:13:55.541  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:13:55.799  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:13:55.800  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 1.767 seconds (JVM running for 1305.48)
+2020-11-19 17:13:55.802  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:13:55.990  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:13:55.990  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:13:55.998  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-11-19 17:15:11.637  INFO 4800 --- [Thread-67] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:15:11.637  INFO 4800 --- [Thread-67] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:15:11.638  INFO 4800 --- [Thread-67] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} closing ...
+2020-11-19 17:15:11.646  INFO 4800 --- [Thread-67] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} closed
+2020-11-19 17:15:14.878  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:15:14.878 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:15:14.878  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:15:15.266  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:15:15.277  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 JPA repository interfaces.
+2020-11-19 17:15:15.536  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:15:15.537  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:15:15.537  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:15:15.573  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:15:15.573  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 692 ms
+2020-11-19 17:15:15.600  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:15:15.662  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-10} inited
+2020-11-19 17:15:15.793  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:15:15.853  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:15:16.359  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:15:16.388  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:15:16.629  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:15:16.665  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:15:16.973  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:15:16.973  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.125 seconds (JVM running for 1386.653)
+2020-11-19 17:15:16.975  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:15:20.160  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:15:20.161  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:15:20.175  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-11-19 17:18:14.813  INFO 4800 --- [Thread-73] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:18:14.813  INFO 4800 --- [Thread-73] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:18:14.814  INFO 4800 --- [Thread-73] com.alibaba.druid.pool.DruidDataSource   : {dataSource-10} closing ...
+2020-11-19 17:18:14.822  INFO 4800 --- [Thread-73] com.alibaba.druid.pool.DruidDataSource   : {dataSource-10} closed
+2020-11-19 17:18:16.272  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Starting BlogApplication on U4VATRFZ7P08M83 with PID 4800 (D:\Blog\target\classes started by Administrator in D:\Blog)
+2020-11-19 17:18:16.272 DEBUG 4800 --- [restartedMain] com.blog.BlogApplication                 : Running with Spring Boot v2.1.17.RELEASE, Spring v5.1.18.RELEASE
+2020-11-19 17:18:16.272  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : The following profiles are active: dev
+2020-11-19 17:18:16.675  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-11-19 17:18:16.681  INFO 4800 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JPA repository interfaces.
+2020-11-19 17:18:16.960  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-19 17:18:16.961  INFO 4800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-19 17:18:16.961  INFO 4800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-19 17:18:17.000  INFO 4800 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-19 17:18:17.000  INFO 4800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 726 ms
+2020-11-19 17:18:17.037  INFO 4800 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-11-19 17:18:17.090  INFO 4800 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-11} inited
+2020-11-19 17:18:17.179  INFO 4800 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-11-19 17:18:17.217  INFO 4800 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-19 17:18:17.817  INFO 4800 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-19 17:18:17.844  INFO 4800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-19 17:18:18.092  INFO 4800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-19 17:18:18.131  INFO 4800 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-19 17:18:18.355  INFO 4800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-19 17:18:18.355  INFO 4800 --- [restartedMain] com.blog.BlogApplication                 : Started BlogApplication in 2.104 seconds (JVM running for 1568.035)
+2020-11-19 17:18:18.357  INFO 4800 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-19 17:18:22.533  INFO 4800 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-19 17:18:22.534  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-19 17:18:22.543  INFO 4800 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-11-19 17:18:22.549 DEBUG 4800 --- [http-nio-8080-exec-1] c.b.d.U.findByUsernameAndPassword        : ==>  Preparing: select * from t_user where username=? and password=?
+2020-11-19 17:18:22.550 DEBUG 4800 --- [http-nio-8080-exec-1] c.b.d.U.findByUsernameAndPassword        : ==> Parameters: Lee(String), e10adc3949ba59abbe56e057f20f883e(String)
+2020-11-19 17:18:22.551 DEBUG 4800 --- [http-nio-8080-exec-1] c.b.d.U.findByUsernameAndPassword        : <==      Total: 1
+2020-11-19 17:18:23.074 DEBUG 4800 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 17:18:23.075 DEBUG 4800 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 17:18:23.077 DEBUG 4800 --- [http-nio-8080-exec-7] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 17:18:23.078 DEBUG 4800 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 17:18:23.078 DEBUG 4800 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 17:18:23.080 DEBUG 4800 --- [http-nio-8080-exec-7] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3
+2020-11-19 17:18:26.960 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.listBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id WHERE 1 = 1
+2020-11-19 17:18:26.961 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.listBlog_COUNT   : ==> Parameters: 
+2020-11-19 17:18:26.961 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.listBlog_COUNT   : <==      Total: 1
+2020-11-19 17:18:26.963 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.listBlog         : ==>  Preparing: SELECT tb.id blogId, tb.title, tb.flag, tb.content, tb.first_picture, tb.description, tb.update_time, tb.create_time, tb.appreciation, tb.commentable, tb.recommend, tb.published, tb.share_statement, tb.views, tt.name typename FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id = tt.id WHERE 1 = 1 order by update_time desc LIMIT ?
+2020-11-19 17:18:26.963 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.listBlog         : ==> Parameters: 3(Integer)
+2020-11-19 17:18:26.965 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.BlogMapper.listBlog         : <==      Total: 3
+2020-11-19 17:18:26.970 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.TypeMapper.listTypes        : ==>  Preparing: select * from t_type
+2020-11-19 17:18:26.973 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.TypeMapper.listTypes        : ==> Parameters: 
+2020-11-19 17:18:26.974 DEBUG 4800 --- [http-nio-8080-exec-6] com.blog.dao.TypeMapper.listTypes        : <==      Total: 3
+2020-11-19 17:18:27.445 DEBUG 4800 --- [http-nio-8080-exec-1] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==>  Preparing: SELECT count(0) FROM t_blog WHERE recommend = true
+2020-11-19 17:18:27.445 DEBUG 4800 --- [http-nio-8080-exec-1] c.blog.dao.BlogMapper.listBlogTop_COUNT  : ==> Parameters: 
+2020-11-19 17:18:27.446 DEBUG 4800 --- [http-nio-8080-exec-1] c.blog.dao.BlogMapper.listBlogTop_COUNT  : <==      Total: 1
+2020-11-19 17:18:27.447 DEBUG 4800 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.listBlogTop      : ==>  Preparing: SELECT * FROM t_blog WHERE recommend = true order by update_time desc LIMIT ?
+2020-11-19 17:18:27.448 DEBUG 4800 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.listBlogTop      : ==> Parameters: 3(Integer)
+2020-11-19 17:18:27.449 DEBUG 4800 --- [http-nio-8080-exec-1] com.blog.dao.BlogMapper.listBlogTop      : <==      Total: 3

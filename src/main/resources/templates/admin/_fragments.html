@@ -119,6 +119,9 @@
 <script src="../../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
 <script src="../../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 </th:block>
+<script>
+    $('#newblog-container').load(/*[[@{/admin/footer/newblog}]]*/"/admin/footer/newblog");
+</script>
 
 </body>
 </html>

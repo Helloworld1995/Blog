@@ -110,4 +110,9 @@ public class BlogController {
         model.addAttribute("blog", blogService.getBlogAndConvert(id,url));
         return "admin/blog";
     }
+    @GetMapping("/footer/newblog")
+    public String newblogs(Model model) {
+        model.addAttribute("newblogs", blogService.listBlogTop(3));
+        return "admin/_fragments :: newblogList";
+    }
 }
