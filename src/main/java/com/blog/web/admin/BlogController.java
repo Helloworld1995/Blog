@@ -9,6 +9,8 @@ import com.blog.service.TypeService;
 import com.blog.vo.BlogQuery;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 
+@PropertySource("classpath:i18n/messages.properties")
 @Controller
 @RequestMapping("/admin")
 public class BlogController {
@@ -28,11 +31,13 @@ public class BlogController {
     TypeService typeService;
     @Autowired
     TagService tagService;
-
+    @Value("${admin.index.blogCount}")
+    private Integer blogCount;
     @GetMapping("/blogs")
     public String listBlog(@RequestParam(name = "page",required = true,defaultValue = "1") int page,
                        @RequestParam(name = "size",required = true,defaultValue = "3") int size,BlogQuery blogQuery, Model model){
-        List<Blog> blogs = blogService.listBlog(page, size, blogQuery);
+
+        List<Blog> blogs = blogService.listBlog(page, blogCount, blogQuery);
         PageInfo<Blog> blogsByPages=new PageInfo<>(blogs);
         model.addAttribute("blogs",blogsByPages);
         model.addAttribute("types",typeService.listTypes());
@@ -41,7 +46,7 @@ public class BlogController {
 
     @PostMapping("/blogs/search")
     public String search(@RequestParam(name = "page",required = true,defaultValue = "1") int page,
-                         @RequestParam(name = "size",required = true,defaultValue = "3") int size, BlogQuery blogQuery, Model model){
+                         @RequestParam(name = "size",required = true,defaultValue = "5") int size, BlogQuery blogQuery, Model model){
         List<Blog> blogs = blogService.listBlog(page, size, blogQuery);
         PageInfo<Blog> blogsByPages=new PageInfo<>(blogs);
         model.addAttribute("blogs",blogsByPages);

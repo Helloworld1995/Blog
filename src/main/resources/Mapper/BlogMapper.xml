@@ -46,6 +46,7 @@ WHERE ttg.id=#{id};
 <include refid="select_t_blog"/>,
 <include refid="select_type"/>tu.id userId,tu.nickname,tu.avatar
 <include refid="join_table"/>
+WHERE tb.published=1
 </select>
 
 <select id="listBlogQuery" parameterType="String" resultMap="selectBlogResultMap">

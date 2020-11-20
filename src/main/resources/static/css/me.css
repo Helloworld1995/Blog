@@ -1,7 +1,11 @@
 body{
-    background: url("../images/后台管理bg.jpg") !important;
+    background: url("../images/你的名字bg.jpg") !important;
+    background-size: cover !important;
 }
-
+.m-content-size{
+    min-height: 750px !important;
+    max-height: 900px !important;
+}
 .m-padded-tb-mini{
     padding-top:0.2em !important;
     padding-bottom: 0.2em !important;

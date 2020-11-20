@@ -4,6 +4,8 @@ import com.blog.po.Tag;
 import com.blog.service.TagService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -16,17 +18,19 @@ import java.util.List;
 /**
  * Created by limi on 2017/10/16.
  */
-
+@PropertySource("classpath:i18n/messages.properties")
 @Controller
 @RequestMapping("/admin")
 public class TagController {
 
     @Autowired
     private TagService tagService;
-
+    @Value("${admin.index.tagCount}")
+    private Integer tagCount;
     @GetMapping("/tags")
     public String tags(@RequestParam(name = "page",required = true,defaultValue = "1") int page,
                        @RequestParam(name = "size",required = true,defaultValue = "3") int size, Model model) {
+        size=tagCount;
         List<Tag> tags = tagService.findByPages(page, size);
         PageInfo<Tag> tagPageInfo = new PageInfo<>(tags);
         model.addAttribute("tags",tagPageInfo);

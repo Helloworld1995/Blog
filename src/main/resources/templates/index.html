@@ -37,11 +37,11 @@
     </a>
 </nav>
 <!--中间内容-->
-<div  class="m-container m-padded-tb-big animated fadeIn">
+<div  class="m-container m-padded-tb-big animated fadeIn m-content-size">
     <div class="ui container">
         <div class="ui stackable grid">
             <!--左边博客列表-->
-            <div class="eleven wide column">
+            <div class="ten wide column">
                 <div class="ui top attached segment">
                     <div class="ui middle aligned two column grid">
                         <div class="column">
@@ -87,7 +87,7 @@
                 </div>
             </div>
 
-                <div class="ui bottom attached segment">
+            <div class="ui bottom attached segment">
                     <div class="ui middle aligned two column grid" th:if="${blogs.pages}>1">
                         <div class="column">
                             <a href="#" th:href="@{/(page=${blogs.pageNum}-1)}" th:unless="${blogs.isFirstPage}" class="ui mini teal basic button">上一页</a>
@@ -101,7 +101,7 @@
             <!--右边的top-->
         <div class="five wide column">
             <!--分类-->
-            <div class="ui segments m-margin-top">
+            <div class="ui top attached segments">
                 <div class="ui secondary segment">
                     <div class="ui two column grid">
                         <div class="column">
@@ -136,7 +136,6 @@
                 <div class="ui teal segment">
                 <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui m-margin-tb-tiny teal basic left pointing label" th:each="tag:${tags.list}">
                 <span th:text="${tag.name}">方法论</span><div th:text="${tag.count}" class="detail">23</div></a>
-
                 </div>
             </div>
             <div class="ui m-margin-top segments">
@@ -146,17 +145,12 @@
                 <div class="ui segment" th:each="recBlog:${recommendBlogs.list}">
                     <a href="#" th:href="@{/blog/{id}(id=${recBlog.id})}" class="m-black" target="_blank" th:text="${recBlog.title}">推荐的博客 (hot blog)</a>
                 </div>
-
-            </div>
-            <!--二维码-->
-            <h4 class="ui horizontal divider header">扫码关注我</h4>
-            <div class="centered ui card m-margin-top-large" style="width: 10em">
-                <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" >
             </div>
         </div>
     </div>
 </div>
 </div>
+
 <!--底部-->
 <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massvie m-margin-top-large">
 <div class="ui center aligned container">
@@ -189,8 +183,8 @@
             <p class="m-opacity-mini m-text-lined">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
         </div>
     </div>
-    <div class="ui inverted section divider"><p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright @ 2016-2017 Lee Designed by Lee</p> </div>
-
+    <div class="ui inverted section divider"><p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright @ 2016-2017 Lee Designed by Lee</p>
+</div>
 </div>
 </footer>
 /*/<th:block th:replace="_fragments :: script">/*/  thymeleaf模板并依然起作用

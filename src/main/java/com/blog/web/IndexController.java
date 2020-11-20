@@ -8,16 +8,18 @@ import com.blog.service.TagService;
 import com.blog.service.TypeService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
+
 @Controller
+@PropertySource("classPath:i18n/messages.properties")
 public class IndexController {
     @Autowired
     private BlogService blogService;
@@ -25,14 +27,21 @@ public class IndexController {
     private TypeService typeService;
     @Autowired
     private TagService tagService;
-
+    @Value("${index.blogCount}")
+    private Integer blogCount;
+    @Value("${index.typeCount}")
+    private Integer typeCount;
+    @Value("${index.tagCount}")
+    private Integer tagCount;
+    @Value("${index.recommendBlogCount}")
+    private Integer recommendBlogCount;
     @GetMapping("/")
     public String index(@RequestParam(name = "page", required = true, defaultValue = "1") int page,
-                        @RequestParam(name = "size", required = true, defaultValue = "6") int size, Model model) {
-        PageInfo<Blog> blogs = new PageInfo<>(blogService.listAllBlogs(page, size));
-        PageInfo<Type> types = new PageInfo<>(typeService.listTypeTop(6));
-        PageInfo<Tag> tags = new PageInfo<>(tagService.listTagTop(6));
-        PageInfo<Blog> recommendBlogs = new PageInfo<>(blogService.listBlogTop(8));
+                        @RequestParam(name = "size", required = true, defaultValue = "5")  int size, Model model) {
+        PageInfo<Blog> blogs = new PageInfo<>(blogService.listAllBlogs(page, blogCount));
+        PageInfo<Type> types = new PageInfo<>(typeService.listTypeTop(typeCount));
+        PageInfo<Tag> tags = new PageInfo<>(tagService.listTagTop(tagCount));
+        PageInfo<Blog> recommendBlogs = new PageInfo<>(blogService.listBlogTop(recommendBlogCount));
         model.addAttribute("blogs", blogs);
         model.addAttribute("types", types);
         model.addAttribute("tags", tags);
@@ -48,7 +57,7 @@ public class IndexController {
 
     @PostMapping("/search")
     public String search(@RequestParam(name = "page", required = true, defaultValue = "1") int page,
-                         @RequestParam(name = "size", required = true, defaultValue = "6") int size,
+                         @RequestParam(name = "size", required = true, defaultValue = "5") int size,
                          @RequestParam String query, Model model) {
 
         PageInfo<Blog> blogs = new PageInfo<>(blogService.listBlogQuery("%" + query + "%", page, size));

@@ -5,6 +5,8 @@ import com.blog.service.TypeService;
 
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -20,17 +22,19 @@ import java.util.List;
 /**
  * Created by limi on 2017/10/16.
  */
-
+@PropertySource("classpath:i18n/messages.properties")
 @Controller
 @RequestMapping("/admin")
 public class TypeController {
 
     @Autowired
     private TypeService typeService;
-
+    @Value("${admin.index.typeCount}")
+    private Integer typeCount;
     @GetMapping("/types")
     public String types(@RequestParam(name = "page",required = true,defaultValue = "1") int page,
                         @RequestParam(name = "size",required = true,defaultValue = "3") int size, Model model) {
+        size=typeCount;
         List<Type> types=typeService.findByPages(page,size);
         PageInfo<Type> typePageInfo = new PageInfo<>(types);
         model.addAttribute("pages",typePageInfo);
