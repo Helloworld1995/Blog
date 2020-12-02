@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 
-@PropertySource("classpath:i18n/messages.properties")
+@PropertySource("classpath:i18n/message.properties")
 @Controller
 @RequestMapping("/admin")
 public class BlogController {

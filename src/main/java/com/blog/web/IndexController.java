@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-@PropertySource("classPath:i18n/messages.properties")
+@PropertySource("classpath:i18n/message.properties")
 public class IndexController {
     @Autowired
     private BlogService blogService;

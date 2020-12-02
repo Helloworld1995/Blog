@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by limi on 2017/10/16.
  */
-@PropertySource("classpath:i18n/messages.properties")
+@PropertySource("classpath:i18n/message.properties")
 @Controller
 @RequestMapping("/admin")
 public class TypeController {
