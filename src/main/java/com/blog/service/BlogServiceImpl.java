@@ -82,6 +82,7 @@ public class BlogServiceImpl implements BlogService {
         Collections.sort(blogs, new Comparator<Blog>() {
             @Override
             public int compare(Blog o1, Blog o2) {
+
                 return o2.getViews()-o1.getViews();
             }
         });

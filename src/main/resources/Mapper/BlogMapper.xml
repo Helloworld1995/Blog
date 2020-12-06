@@ -43,7 +43,7 @@ ON ttg.id=tbt.tags_id
 WHERE ttg.id=#{id};
 </select>
 <select id="listAllBlogs" resultMap="selectBlogResultMap">
-SELECT tb.id blogId,tb.title,tb.content,tb.first_picture,tb.views,tb.published,tb.description,
+SELECT tb.id blogId,tb.title,tb.content,tb.first_picture,tb.views,tb.published,tb.description,tb.update_time,
 <include refid="select_type"/>tu.id userId,tu.nickname,tu.avatar
 <include refid="join_table"/>
 WHERE tb.published=1

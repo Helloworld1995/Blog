@@ -29,18 +29,15 @@ public class IndexController {
     private TagService tagService;
     @Value("${index.blogCount}")
     private Integer blogCount;
-    @Value("${index.typeCount}")
-    private Integer typeCount;
-    @Value("${index.tagCount}")
-    private Integer tagCount;
+
     @Value("${index.recommendBlogCount}")
     private Integer recommendBlogCount;
     @GetMapping("/")
     public String index(@RequestParam(name = "page", required = true, defaultValue = "1") int page,
-                        @RequestParam(name = "size", required = true, defaultValue = "5")  int size, Model model) {
+                        @RequestParam(name = "size", required = true, defaultValue ="4")  int size, Model model) {
         PageInfo<Blog> blogs = new PageInfo<>(blogService.listAllBlogs(page, blogCount));
-        PageInfo<Type> types = new PageInfo<>(typeService.listTypeTop(typeCount));
-        PageInfo<Tag> tags = new PageInfo<>(tagService.listTagTop(tagCount));
+        PageInfo<Type> types = new PageInfo<>(typeService.listTypeTop(size));
+        PageInfo<Tag> tags = new PageInfo<>(tagService.listTagTop(size));
         PageInfo<Blog> recommendBlogs = new PageInfo<>(blogService.listBlogTop(recommendBlogCount));
         model.addAttribute("blogs", blogs);
         model.addAttribute("types", types);
