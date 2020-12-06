@@ -2,6 +2,7 @@ package com.blog.po;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "t_tag")
-public class Tag {
+public class Tag implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
@@ -18,9 +19,6 @@ public class Tag {
     private String name;
     @ManyToMany(mappedBy = "tags")
     private List<Blog> blogs=new ArrayList<>();
-    @Transient
-    private Integer count;
-
     public Tag() {
     }
 
@@ -33,14 +31,7 @@ public class Tag {
         return this;
     }
 
-    public Integer getCount() {
-        return count;
-    }
 
-    public Tag setCount(Integer count) {
-        this.count = count;
-        return this;
-    }
 
     public String getName() {
         return name;

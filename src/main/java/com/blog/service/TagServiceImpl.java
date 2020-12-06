@@ -8,11 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
 public class TagServiceImpl implements TagService {
-    @Autowired
+    @Autowired(required =false)
     private TagMapper tagMapper;
 
     @Override
@@ -63,12 +65,16 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public List<Tag> listTagTop(Integer size) {
-        String order="blogsCount"+" desc";
-        PageHelper.startPage(0,size,order);
+        PageHelper.startPage(0,size);
         List<Tag> tags = tagMapper.listTagTop();
+        Collections.sort(tags, new Comparator<Tag>() {
+            @Override
+            public int compare(Tag o1, Tag o2) {
+                return o2.getBlogs().size()-o1.getBlogs().size();
+            }
+        });
         return tags;
     }
-
     @Override
     public List<Tag> listTagByBlog(Long blogId) {
         return tagMapper.listTagByBlog(blogId);

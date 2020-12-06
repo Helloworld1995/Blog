@@ -2,14 +2,25 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.blog.dao.CommentMapper">
-<!--<select id="listCommentByBlogId" parameterType="Long" resultMap="selectCommentMap">-->
-<!--SELECT t1.id,t1.avatar,t1.content,t1.create_time,t1.email,t1.nickname,t1.parent_comment_id,t2.id t2id,t2.avatar t2avatar,t2.content t2content,t2.email t2email,t2.create_time t2time,t2.nickname t2name,t2.parent_comment_id t2parentId-->
-<!--FROM t_comment t1-->
-<!--LEFT JOIN t_comment t2-->
-<!--ON t1.id=t2.parent_comment_id-->
-<!--WHERE t1.blog_id=#{blogId}-->
-<!--ORDER BY t1.create_time DESC-->
-<!--</select>-->
+<select id="getLatestComment" resultMap="selectCommentMap">
+SELECT t1.id,t1.avatar,t1.content,t1.create_time,t1.email,t1.nickname,t1.admin_comment,t1.parent_comment_id,tb.id blogid,t2.id t2id,t2.avatar t2avatar,t2.content t2content,t2.email t2email,t2.admin_comment t2admin_comment,t2.create_time t2time,t2.nickname t2name,t2.parent_comment_id t2parentId
+FROM t_comment t1
+LEFT JOIN t_comment t2
+ON t1.parent_comment_id=t2.id
+LEFT JOIN t_blog tb
+ON t1.blog_id=tb.id
+ORDER BY t1.id DESC
+LIMIT 1
+</select>
+
+<select id="listCommentByBlogId" parameterType="Long" resultMap="selectCommentMap">
+SELECT t1.id,t1.avatar,t1.content,t1.create_time,t1.email,t1.nickname,t1.admin_comment,t1.parent_comment_id,t2.id t2id,t2.avatar t2avatar,t2.content t2content,t2.email t2email,t2.create_time t2time,t2.admin_comment t2admin_comment,t2.nickname t2name,t2.parent_comment_id t2parentId
+FROM t_comment t1
+LEFT JOIN t_comment t2
+ON t1.parent_comment_id=t2.id
+WHERE t1.blog_id=#{blogId}
+ORDER BY t1.create_time DESC
+</select>
 <resultMap id="selectCommentMap" type="com.blog.po.Comment">
     <id property="id" column="id"/>
     <result property="avatar" column="avatar"/>
@@ -17,13 +28,18 @@
     <result property="createTime" column="create_time"/>
     <result property="email" column="email"/>
     <result property="nickname" column="nickname"/>
-<collection property="replyComments" javaType="list" ofType="com.blog.po.Comment">
+    <result property="adminComment" column="admin_comment"/>
+<association property="parentComment" javaType="com.blog.po.Comment">
     <result property="id" column="t2id"/>
     <result property="email" column="t2email"/>
     <result property="content" column="t2content"/>
     <result property="avatar" column="t2avatar"/>
     <result property="createTime" column="t2time"/>
     <result property="nickname" column="t2name"/>
-</collection>
+    <result property="adminComment" column="t2admin_comment"/>
+</association>
+<association property="blog" javaType="com.blog.po.Blog">
+    <result property="id" column="blogid"/>
+</association>
 </resultMap>
 </mapper>

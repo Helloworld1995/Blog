@@ -3,17 +3,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.blog.dao.TypeMapper">
 <select id="listTypeTop" resultMap="typesAndBlogsMap">
-SELECT tt.*,count(tb.id) blogsCount FROM t_type tt JOIN t_blog tb ON tb.type_id=tt.id
-WHERE tb.published
-GROUP BY tt.id
+SELECT tt.*,tb.id blogId,tb.published,tb.published FROM t_type tt LEFT JOIN t_blog tb ON tb.type_id=tt.id
 </select>
     <resultMap id="typesAndBlogsMap" type="com.blog.po.Type">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
-        <result property="count" column="blogsCount"/>
         <!--<collection property="bloglist" javaType="list" ofType="com.blog.po.Blog">-->
             <!--<id property="id" column="tb_id"/>-->
         <!--</collection>-->
+        <collection property="bloglist" javaType="list" ofType="com.blog.po.Blog">
+            <result property="id" column="blogId"/>
+            <result property="published" column="published"/>
+        </collection>
     </resultMap>
 
 </mapper>

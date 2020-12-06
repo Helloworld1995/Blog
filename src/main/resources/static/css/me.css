@@ -1,11 +1,10 @@
+
 body{
     background: url("../images/你的名字bg.jpg") !important;
     background-size: cover !important;
 }
-.m-content-size{
-    min-height: 750px !important;
-    max-height: 900px !important;
-}
+
+
 .m-padded-tb-mini{
     padding-top:0.2em !important;
     padding-bottom: 0.2em !important;
@@ -13,6 +12,12 @@ body{
 .m-padded-tb-tiny{
     padding-top: 0.3em !important;
     padding-bottom: 0.3em !important;
+}
+.blog-firstPicture-size{
+    width: 500px !important;
+    height: 500px !important;
+    margin: 0 auto !important;
+
 }
 .m-padded-tb-small{
     padding-top: 0.5em !important;
@@ -35,8 +40,8 @@ body{
     padding-bottom: 4em !important;
 }
 .m-padded-tb-massive{
-    padding-top: 5em !important;
-    padding-bottom: 5em !important;
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
 }
 
 /*----------text----------*/
@@ -110,10 +115,8 @@ body{
     /*width: 100% !important;*/
     /*position: absolute !important;*/
     /*bottom: 0 !important;*/
-    width: 100% !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    margin-top: 2em !important;
+
+
 }
 
 

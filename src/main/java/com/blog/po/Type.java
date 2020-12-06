@@ -2,6 +2,7 @@ package com.blog.po;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "t_type")
-public class Type {
+public class Type implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
@@ -18,8 +19,7 @@ public class Type {
     private String name;
     @OneToMany(mappedBy = "type")
     private List<Blog> bloglist=new ArrayList<>();
-    @Transient
-    private Integer count;
+
     public Type() {
     }
 
@@ -39,15 +39,6 @@ public class Type {
 
     public Type setName(String name) {
         this.name = name;
-        return this;
-    }
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public Type setCount(Integer count) {
-        this.count = count;
         return this;
     }
 

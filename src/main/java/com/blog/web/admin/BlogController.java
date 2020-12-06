@@ -81,7 +81,6 @@ public class BlogController {
         if(!blog.getTagIdList().isEmpty()) {
             blog.setTags(tagService.getTags(blog.getTagIdList()));
         }
-//        blog.setCreateTime(blog.getCreateTime());
         int res=0;
         if(blog.getId()==null){
             blog.setCreateTime(new Date());

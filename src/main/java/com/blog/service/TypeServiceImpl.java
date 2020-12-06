@@ -9,11 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
 public class TypeServiceImpl implements TypeService{
-    @Autowired
+    @Autowired(required = false)
     private TypeMapper typeMapper;
     @Transactional
     @Override
@@ -65,9 +67,14 @@ public class TypeServiceImpl implements TypeService{
 
     @Override
     public List<Type> listTypeTop(Integer size) {
-        String order="blogsCount"+" desc";
-       PageHelper.startPage(0,size,order);
+       PageHelper.startPage(0,size);
        List<Type> types = typeMapper.listTypeTop();
+        Collections.sort(types, new Comparator<Type>() {
+            @Override
+            public int compare(Type o1, Type o2) {
+                return o2.getBloglist().size()-o1.getBloglist().size();
+            }
+        });
        return types;
     }
 }

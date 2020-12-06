@@ -13,17 +13,17 @@ SELECT tt.* FROM t_tag tt JOIN t_blog_tags ttt ON ttt.tags_id=tt.id JOIN t_blog 
 WHERE tb.id=#{blogId}
 </select>
 <select id="listTagTop" resultMap="tagAndBlogMap">
-SELECT tt.*,count(tb.id) blogsCount FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id=tt.id LEFT JOIN t_blog tb
-ON tb.id=ttt.blogs_id WHERE tb.published GROUP BY tt.id
+SELECT tt.*,tb.id,tb.published FROM t_tag tt LEFT JOIN t_blog_tags ttt ON ttt.tags_id=tt.id LEFT JOIN t_blog tb
+ON tb.id=ttt.blogs_id
 </select>
 
 <resultMap id="tagAndBlogMap" type="com.blog.po.Tag">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
-        <result property="count" column="blogsCount"/>
-        <!--<collection property="blogs" javaType="list" ofType="com.blog.po.Blog">-->
-                <!--<result property="tb.id" column="tb_id"/>-->
-        <!--</collection>-->
+        <collection property="blogs" javaType="list" ofType="com.blog.po.Blog">
+                <result property="id" column="blogId"/>
+                <result property="published" column="published"/>
+        </collection>
 </resultMap>
 
 

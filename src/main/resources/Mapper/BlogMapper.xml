@@ -43,7 +43,7 @@ ON ttg.id=tbt.tags_id
 WHERE ttg.id=#{id};
 </select>
 <select id="listAllBlogs" resultMap="selectBlogResultMap">
-<include refid="select_t_blog"/>,
+SELECT tb.id blogId,tb.title,tb.content,tb.first_picture,tb.views,tb.published,tb.description,
 <include refid="select_type"/>tu.id userId,tu.nickname,tu.avatar
 <include refid="join_table"/>
 WHERE tb.published=1
@@ -99,7 +99,7 @@ WHERE id=#{id}
 </update>
 
 <sql id="select_t_blog">
-    SELECT tb.id blogId,tb.title,tb.flag,tb.content,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views
+    SELECT tb.id blogId,tb.title,tb.content,tb.flag,tb.first_picture,tb.description,tb.update_time,tb.create_time,tb.appreciation,tb.commentable,tb.recommend,tb.published,tb.share_statement,tb.views
 </sql>
 <sql id="join_table">
     FROM t_blog tb LEFT JOIN t_type tt ON tb.type_id=tt.id LEFT JOIN t_user tu ON tb.user_id=tu.id

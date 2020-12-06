@@ -11,13 +11,13 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.*;
 
 @Service
 public class BlogServiceImpl implements BlogService {
-    @Autowired
+    @Autowired(required = false)
     private BlogMapper blogMapper;
-
     @Override
     public Blog getBlog(Long id) {
         return blogMapper.getBlog(id);
@@ -58,8 +58,6 @@ public class BlogServiceImpl implements BlogService {
         insertBlogToTag(blog);
         return res;
     }
-
-    
     @Override
     public void insertBlogToTag(Blog blog){
         this.clearBlogToTags(blog.getId());
@@ -67,7 +65,6 @@ public class BlogServiceImpl implements BlogService {
             this.saveBlogToTag(blog);
         }
     }
-
     @Override
     public Integer clearBlogToTags(Long id) {
         return blogMapper.clearBlogToTags(id);
@@ -81,7 +78,14 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public List<Blog> listBlogTop(Integer size) {
         pageInfo(0,size);
-        return blogMapper.listBlogTop();
+        List<Blog> blogs=blogMapper.listBlogTop();
+        Collections.sort(blogs, new Comparator<Blog>() {
+            @Override
+            public int compare(Blog o1, Blog o2) {
+                return o2.getViews()-o1.getViews();
+            }
+        });
+        return blogs;
     }
 
     @Override
@@ -106,7 +110,6 @@ public class BlogServiceImpl implements BlogService {
         }
         return b;
     }
-
     @Override
     public List<Blog> listBlogByTypeId(Integer page,Integer size,Long id) {
         pageInfo(page,size);
@@ -173,7 +176,5 @@ public class BlogServiceImpl implements BlogService {
     public List<BlogToTagQuery> getBlogToTag(Long id) {
         return blogMapper.getBlogToTag(id);
     }
-
-
 
 }

@@ -32,7 +32,7 @@
 </nav>
 <!--中间内容-->
 <div class="m-container-small m-padded-tb-big m-content-size">
-   <div class="ui container">
+   <div style="opacity: 90%" class="ui container">
        <div class="ui top attached segment">
            <div class="ui middle aligned two column grid">
                <div class="column">
@@ -45,7 +45,7 @@
        </div>
        <div class="ui m-padded-tb-large attached segment">  <!--标签-->
            <a href="#" th:href="@{/tags/{id}/(id=${tag.id})}" target="_self" class="ui m-margin-tb-tiny large basic left pointing label" th:classappend="${tag.id==activeTagId}? 'teal'" th:each="tag:${tags.list}">
-               <span th:text="${tag.name}"></span><div class="detail" th:text="${tag.count}">23</div>
+               <span th:text="${tag.name}"></span><div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
            </a>
        </div>
        <div class="ui top attached teal segment">

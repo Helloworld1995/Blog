@@ -38,7 +38,7 @@
 </nav>
 <!--中间内容-->
 <div  class="m-container m-padded-tb-big animated fadeIn m-content-size">
-    <div class="ui container">
+    <div style="opacity: 90%" class="ui container">
         <div class="ui stackable grid">
             <!--左边博客列表-->
             <div class="ten wide column">
@@ -116,7 +116,7 @@
                     <div class="ui fluid vertical menu">
                         <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="item" th:each="type:${types.list}">
                             <span th:text="${type.name}">学习日志</span>
-                            <div class="ui teal basic left pointing label" th:text="${type.count}">13</div>
+                            <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.bloglist)}">13</div>
                         </a>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="ui teal segment">
                 <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" class="ui m-margin-tb-tiny teal basic left pointing label" th:each="tag:${tags.list}">
-                <span th:text="${tag.name}">方法论</span><div th:text="${tag.count}" class="detail">23</div></a>
+                <span th:text="${tag.name}">方法论</span><div th:text="${#arrays.length(tag.blogs)}" class="detail">23</div></a>
                 </div>
             </div>
             <div class="ui m-margin-top segments">

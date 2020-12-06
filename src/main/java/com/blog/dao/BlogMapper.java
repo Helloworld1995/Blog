@@ -38,7 +38,7 @@ public interface BlogMapper {
     @Delete("delete from t_blog_tags where blogs_id=#{id} and tags_id=#{tagId}")
     Integer deleteBlogToTag(Long id,Long tagId);
 
-    @Select("select * from t_blog where recommend=true")
+    @Select("select id,title from t_blog where recommend=true and published")
     List<Blog> listBlogTop();
 
     List<Blog> listBlogQuery(String query);

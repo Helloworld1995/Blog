@@ -3,6 +3,7 @@ package com.blog.po;
 import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "t_comment")
-public class Comment {
+public class Comment implements Serializable {
     @Id
     @GeneratedValue
     private Long id;

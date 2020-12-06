@@ -36,8 +36,8 @@
     </a>
 </nav>
 <!--中间内容-->
-<div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn m-content-size">
-    <div class="ui container">
+<div id="waypoint" class="m-container-small m-padded-tb-big animated fadeIn">
+    <div style="opacity: 90%" class="ui container">
         <div class="ui top attached segment">
             <div class="ui horizontal link list">
                 <div class="item">
@@ -54,7 +54,7 @@
         </div>
         <div class="ui attached segment">
             <!--fluid盛满segment-->
-            <img src="../static/images/小新详情页大图.jpg" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded fluid image">
+            <img src="../static/images/小新详情页大图.jpg" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded fluid image blog-firstPicture-size">
         </div>
         <div class="ui attached padded segment">
             <div class="ui right aligned basic segment" th:if="${blog.flag}!=''">
@@ -85,9 +85,9 @@
                         <!--</div>-->
                         <div>微信</div>
                     </div>
+                </div>
             </div>
         </div>
-
         <div class="ui attached positive message" th:if="${blog.shareStatement}">
             <div class="ui middle aligned grid">
                 <div class="eleven wide column">
@@ -106,8 +106,8 @@
         <div class="ui bottom attached segment" th:if="${blog.commentable}">
                 <div id="comment-container" class="ui teal segment">
                     <div th:fragment="commentList">
-                        <div class="ui threaded comments">
-                            <h3 class="ui dividing header">Comments</h3>
+                        <div class="ui threaded comments" style="max-width: 100%">
+                            <h3 class="ui dividing header">评论</h3>
                             <div class="comment" th:each="comment: ${comments}">
                                 <a class="avatar">
                                     <img src="../static/images/father.png" th:src="@{${comment.avatar}}">
@@ -170,16 +170,15 @@
                             <input type="text" name="email" placeholder="邮箱" th:value="${session.user}!=null? ${session.user.email}:''">
                         </div>
                     </div>
-
                     <div class="field m-mobile-wide m-margin-bottom-small">
                         <button id="commentpost-btn" class="ui m-mobile-wide teal button"><i class="edit icon"></i>发布</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!--container 更好的自适应移动端-->
+    </div>
 </div>
-</div>
+     <!--container 更好的自适应移动端-->
 <div id="toolbar" class="m-padded m-fixed m-right-bottom" style="display:none">
     <div class="ui vertical icon buttons">
         <button type="button" href="" class="ui toc teal button">目录</button>
@@ -191,49 +190,12 @@
 <div class="ui toc-container flowing popup transition hidden" style="width: 250px !important;">
     <ol class="js-toc"></ol>
 </div>
-
-<div id="qrcode" class="ui wechat-qr flowing popup transition hidden" style="width: 130px !important">
-<!--    <img src="./images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
+<div id="qrcode" class="ui wechat-qr flowing popup transition hidden " style="width: 130px !important;">
+    <!--<img src="./static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 120px !important;">-->
 </div>
 
-<br>
-<br>
 <!--底部-->
-<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massvie m-margin-top-large">
-<div class="ui center aligned container">
-    <div class="ui inverted divided stackable grid">
-        <div class="three wide column">
-            <div class="ui inverted link list">
-                <div class="item">
-                    <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image" alt="" style="width: 110px">
-                </div>
-            </div>
-        </div>
-        <div class="three wide column">
-            <h4 class="ui inverted header m-opacity-mini">最新博客</h4>
-            <div class="ui inverted link list">
-                <a href="#" class="item">用户故事 (User Story)</a>
-                <a href="#" class="item">用户故事 (User Story)</a>
-                <a href="#" class="item">用户故事 (User Story)</a>
-            </div>
-        </div>
-
-        <div class="three wide column">
-            <h4 class="ui inverted header m-opacity-mini">联系我</h4>
-            <div class="ui inverted link list m-text-lined">
-                <a href="#" class="item">Email (839282112@QQ.COM)</a>
-                <a href="#" class="item">微信 (13340337407)</a>
-            </div>
-        </div>
-        <div class="seven wide column">
-            <h4 class="ui inverted header m-opacity-mini">介绍</h4>
-            <p class="m-opacity-mini m-text-lined">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
-        </div>
-    </div>
-    <div class="ui inverted section divider"><p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright @ 2016-2017 Lee Designed by Lee</p>
-    </div>
-</div>
-</footer>
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment"></footer>
 <th:block th:replace="_fragments :: script">
     <script src="../static/jquery/jquery-2.1.4.min.js"></script>
     <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
@@ -345,9 +307,11 @@
 
     }
     function clearContent() {
-        $("[name='content']").val('');
         $("[name='parentComment.id']").val(-1);
+        $("[name='content']").val('');
         $("[name='content']").attr("placeholder","请输入评论信息...");
+        $("[name='email']").val('');
+        $("[name='nickname']").val('');
     }
 
     function reply(obj) {
