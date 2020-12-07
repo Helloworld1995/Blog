@@ -53,6 +53,10 @@ body{
 .m-text-thin {
     font-weight: 300 !important;
 }
+.beauty-position{
+    position: fixed !important;
+    z-index: 1000 !important;
+}
 
 .m-text-spaced {
     letter-spacing: 1px !important;
@@ -112,11 +116,8 @@ body{
 }
 
 .footer-position{
-    /*width: 100% !important;*/
-    /*position: absolute !important;*/
-    /*bottom: 0 !important;*/
-
-
+    z-index: 0 !important;
+    bottom: 0 !important;
 }
 
 

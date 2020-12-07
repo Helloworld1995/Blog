@@ -149,6 +149,20 @@
         </div>
     </div>
 </div>
+
+</div>
+<div th:replace="_fragments::beauty" class="attached waifu">
+    <!--<div class="waifu-tips"></div>-->
+    <canvas id="live2d" width="280" height="215" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
 </div>
 
 <!--底部-->
@@ -188,12 +202,16 @@
 </div>
 </footer>
 /*/<th:block th:replace="_fragments :: script">/*/  thymeleaf模板并依然起作用
+
     <script src="../static/jquery/jquery-2.1.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <script src="../static/lib/prism/prism.js"></script>
     <script src="../static/lib/tocbot/tocbot.min.js"></script>
     <script src="../static/lib/qrcode/qrcode.min.js"></script>
     <script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
+    <script src="../static/assets/waifu-tips.js"></script>
+    <script src="../static/assets/live2d.js"></script>
+    <script type="text/javascript">initModel("assets/")</script>
 /*/</th:block>/*/
 
 <script>

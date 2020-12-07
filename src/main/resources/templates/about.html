@@ -84,6 +84,19 @@
     </div>
 </div>
 </div>
+<div th:replace="_fragments::beauty" class="attached waifu">
+    <!--<div class="waifu-tips"></div>-->
+    <canvas id="live2d" width="280" height="215" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
 <!--底部-->
 <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massvie m-margin-top-large">
 <div class="ui center aligned container">
@@ -128,14 +141,11 @@
         $('.m-item').toggleClass('m-mobile-hide') /*如果有一点就消失，否则一点出现*/
     });
 
-
     $('.github').popup({
         popup:$('.gitOR.popup'),
         on:'hover',
         position:'bottom center'
     });
-
-
 
     $('.qq').popup({
         popup:$('.QR.popup'),
@@ -150,7 +160,6 @@
             position:'bottom center'
         }
     );
-
 </script>
 
 </body>
