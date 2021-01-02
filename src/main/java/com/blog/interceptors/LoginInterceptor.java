@@ -6,7 +6,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginInterceptor extends HandlerInterceptorAdapter {
+public class  LoginInterceptor extends HandlerInterceptorAdapter {
     /**
      * 避免浏览器直接访问 放行的情况
      * @param request

@@ -50,7 +50,7 @@ WHERE tb.published=1
 </select>
 
 <select id="listBlogQuery" parameterType="String" resultMap="selectBlogResultMap">
-<include refid="select_t_blog"/>,tt.name,tu.avatar,tu.nickname
+<include refid="select_t_blog"/>,tt.name typename,tu.avatar,tu.nickname
 <include refid="join_table"/>
 WHERE tb.title like #{query} or tb.content like #{query} or tb.description like #{query}
 </select>

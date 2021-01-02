@@ -139,7 +139,6 @@ public class BlogServiceImpl implements BlogService {
         return blogMapper.listBlogByYear(year);
     }
 
-
     @Override
     public Long countBlogs() {
         return blogMapper.countBlogs();
@@ -166,7 +165,6 @@ public class BlogServiceImpl implements BlogService {
     public Integer saveBlogToTag(Blog blog) {
         return blogMapper.saveBlogToTag(blog);
     }
-    
 
     @Override
     public List<BlogToTagQuery> checkBlogToTag(Long id, Long tagId) {
@@ -177,5 +175,4 @@ public class BlogServiceImpl implements BlogService {
     public List<BlogToTagQuery> getBlogToTag(Long id) {
         return blogMapper.getBlogToTag(id);
     }
-
 }
